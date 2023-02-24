@@ -9,10 +9,12 @@ import { loadUser } from "./actions/userActions";
 import { useSelector } from "react-redux";
 import UserOptions from "./Companents/Main/Navbar/UserOptions";
 import { useEffect } from "react";
-import ProtectedRoute from "./Route/ProtectedRoute";
+import ProtectedRoute from './Route/ProtectedRoute';
 
 const App = () => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
+
+
   useEffect(() => {
     store.dispatch(loadUser());
   }, []);
@@ -21,9 +23,13 @@ const App = () => {
   return (
     <>
       <div className="App">
+ 
         <RouterProvider router={router}>
+
           {isAuthenticated && <UserOptions user={user} />}
+      
           <ProtectedRoute />
+
         </RouterProvider>
       </div>
     </>

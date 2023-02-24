@@ -1,87 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
 
-  .PageNotFound > a {
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    color: #fff !important;
-    font-size: 50px;
-    font-family: 'Fira Mono', monospace;
-    letter-spacing: -7px;
+.error-404{
+  /* height: 100vh; */
+  background-image: url(https://7oroof.com/tfdemos/wp-granny/wp-content/themes/granny/assets/images/bg-page-title.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.712);
+  background-blend-mode: multiply;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 999;
+  overflow: show;
+  top: 0;
+  left: 0;
+  right: 0;
+  .icon-404{
+    display: inline-block;
+    width: 5.4rem;
+    height: 1.4rem;
+    background-image: url(http://7oroof.com/tfdemos/wp-granny/wp-content/themes/granny/assets/images/icon-h1.png);
+  }
+  .error-title{
+    font-size: 25rem;
+    line-height: 1;
+    color: #fff ;
+    margin-bottom: 2rem;
+    letter-spacing: -0.7rem;
+    animation: glitch 1s linear infinite;
+  }
+  .error-text{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    margin: auto;
+    max-width: 67rem;
+    padding: 1.8rem 3rem 3.5rem;
+    margin: 5rem auto 0;
   }
   
-
-
-
-.notfound{ 
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  background-image: url("https://cdn.shopify.com/s/files/1/0436/0932/5722/files/slide3-bg_2000x_5259e265-945f-4048-83a4-643c6e82e8ea.jpg?v=1646114155");
-  background-blend-mode: multiply;
-  background-color: rgba($color: #000000, $alpha: 0.8);
-  color: #fff;
-  font-size: 96px;
-  font-family: 'Fira Mono', monospace;
-  letter-spacing: -7px;
 }
 
-.PageNotFound{
-  animation: glitch 1s linear infinite;
-}
+
 
 @keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
+  2%, 64%{
+      transform: translate(2px,0) skew(0deg);
   }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
+
+  4%, 60%{
+      transform: translate(-2px,0) skew(0deg);
   }
+
   62%{
-    transform: translate(0,0) skew(5deg); 
+      transform: translate(0,0) skew(5deg);
   }
 }
 
-.PageNotFound:before,
-.PageNotFound:after{
+.error-title::before,
+.error-title::after{
   content: attr(title);
   position: absolute;
   left: 0;
 }
 
-.PageNotFound:before{
+.error-title:before{
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
 @keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
+  2%, 64%{
+      transform: translate(2px,-2px);
   }
-  4%,60%{
-    transform: translate(-2px,2px);
+
+  4%, 60%{
+      transform: translate(-2px,0);
   }
+
   62%{
-    transform: translate(13px,-1px) skew(-13deg); 
+      transform: translate(13px,-1px) skew(-13deg);
   }
 }
 
-.PageNotFound:after{
-  animation: glitchBotom 1.5s linear infinite;
+.error-title:after{
+  animation:glitchBottom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom{
+@keyframes glitchBottom{
   2%,64%{
     transform: translate(-2px,0);
   }
@@ -92,3 +102,6 @@
     transform: translate(-22px,5px) skew(21deg); 
   }
 }
+
+
+

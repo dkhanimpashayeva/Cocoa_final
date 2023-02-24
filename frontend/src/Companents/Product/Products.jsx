@@ -15,13 +15,12 @@ import Loader from "../Loader/Loader";
 import VideoInfoBottom from "../Main/HomeCompanents/VideoInfo/VideoInfoBottom";
 
 const categories = [
+  
   "Best Sellers",
-  "Bar Chocolates",
   "Dark Chocolates",
   "Elite Chocolates",
   "Divine Chocolates",
   "Nutty Chocolates",
-  "Milk Chocolates",
 ];
 
 const Products = () => {
@@ -76,8 +75,10 @@ const { keyword } = useParams();
       <h2 className="productsHeading">Products</h2>
 
       <div className="row">
-      <div className="col-lg-3 col-12 col-md-12">
-       <div className="filterBox">
+      <div className="col-lg-3 col-12 col-md-12 ">
+      <div className="row">
+        <div className="col-lg-12 col-md-4 col-12">
+        <div className="filterBox">
             <Typography className="products-titles">Price</Typography>
             <Slider
               value={price}
@@ -85,7 +86,7 @@ const { keyword } = useParams();
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0}
-              max={25000}
+              max={600}
               className="slider-products"
             />
 
@@ -100,6 +101,7 @@ const { keyword } = useParams();
                 >
                   {category}
                 </li>
+
               ))}
             </ul>
 
@@ -119,7 +121,13 @@ const { keyword } = useParams();
               />
             </fieldset>
           </div>
-          <VideoInfoBottom/>
+        </div>
+   
+<div className="col-12 col-md-8 col-lg-12">
+<VideoInfoBottom/>
+
+  </div>     
+   </div>
        </div>
      <div className="col-lg-9 col-12 col-md-12">
      <div className="products">

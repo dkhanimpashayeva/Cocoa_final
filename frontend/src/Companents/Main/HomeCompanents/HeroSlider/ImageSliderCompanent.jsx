@@ -4,8 +4,8 @@ const ImageSliderCompanent = () => {
   const imgs = [
     {
       id: 0,
-      title: "Special Choco" ,
-      titleUnder:"ForSpecial Occasions",
+      title: "Special Choco",
+      titleUnder: "ForSpecial Occasions",
       thumbBtn: "Choose a COCA",
 
       value:
@@ -14,7 +14,7 @@ const ImageSliderCompanent = () => {
     {
       id: 1,
       title: "A life ",
-      titleUnder:"full of celebration",
+      titleUnder: "full of celebration",
 
       thumbBtn: "Shop Now",
 
@@ -24,7 +24,7 @@ const ImageSliderCompanent = () => {
     {
       id: 2,
       title: "Happiness ",
-      titleUnder:"full of Delight",
+      titleUnder: "full of Delight",
       thumbBtn: "Shop Now",
       value:
         "https://cdn.shopify.com/s/files/1/0436/0932/5722/files/slide3-bg_2000x_5259e265-945f-4048-83a4-643c6e82e8ea.jpg?v=1646114155",
@@ -40,21 +40,17 @@ const ImageSliderCompanent = () => {
   return (
     <div>
       <div className="main">
-      <div className="thumb-gallery-wrapper">
-                <h1>{wordData.title}
-                <br />
-                <span>{wordData.titleUnder}</span>
-                </h1>
+        <div className="thumb-gallery-wrapper">
+          <h1>
+            {wordData.title}
+            <br />
+            <span>{wordData.titleUnder}</span>
+          </h1>
 
-                  {/* <Link to='/'>{wordData.thumbBtn}</Link> */}
-                  <Button/>
-              </div>
-        <img
-          src={wordData.value}
-         
-          className="thumbail-original"
-        />
-   
+          <Button  className="hero-btn"/>
+        </div>
+        <img src={wordData.value} className="thumbail-original" />
+
         <div className="flex_row">
           {imgs.map((data, i) => (
             <div className="thumbnail" key={i}>
@@ -65,7 +61,6 @@ const ImageSliderCompanent = () => {
                 height="90vh"
                 width="60%"
               />
-         
             </div>
           ))}
         </div>

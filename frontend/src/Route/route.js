@@ -24,10 +24,13 @@ import NotFounds from "../Pages/Main/NotFounds/NotFounds";
 import NewProduct from "./../Companents/Admin/NewProduct";
 import OrderSuccess from "./../Companents/Cart/OrderSuccess";
 import ConfirmOrder from "./../Companents/Cart/ConfirmOrder";
-import OrderDetails from "../Companents/Cart/OrderDetails";
+// import OrderDetails from "../Companents/Cart/OrderDetails";
 import UpdateProduct from "./../Companents/Admin/UpdateProduct";
 import UsersList from "./../Companents/Admin/UserList";
 import ForgotPassword from "../Companents/User/ForgotPassword";
+import MyOrders from "../Companents/Order/MyOrders";
+import Stripe from "../Pages/Main/Stripe/Stripe.jsx";
+import OrderDetails from "../Companents/Order/OrderDetails";
 
 export const ROUTES = [
   {
@@ -134,12 +137,24 @@ export const ROUTES = [
         path: "order/confirm",
         element: <ConfirmOrder />,
       },
-      { path: "order/:id", element: <OrderDetails /> },
+      {
+        path: "orders",
+        element: <MyOrders />,
+      },
+      {
+        path: "/order/:id",
+        element: <OrderDetails />,
+      },
+      { path: "order/:id", element: <OrderDetails/> },
 
       {
         path: "password/forgot",
         element: <ForgotPassword />,
       },
+{
+  path:"process/payment",
+  element:<Stripe/>
+}
     ],
   },
 

@@ -42,15 +42,15 @@ const SidebarAdmin = () => {
           Orders
         </p>
       </Link>
-      <Link to="/admin/users">
+      <Link to="/notfounds">
         <p>
           <PeopleIcon /> Users
         </p>
       </Link>
-      <Link to="/admin/reviews">
+      <Link to="/">
         <p>
           <RateReviewIcon />
-          Reviews
+          Go Back
         </p>
       </Link>
     </div>

@@ -1,62 +1,22 @@
 .testimotionals{
-    // width:90% ;
-    padding: 40px 0;
-    margin: 0% auto;
-   .testimotionals-card{
-    text-align: center;
-    img{
-        border-radius: 50%;
-        height: 70px;
-        margin:20px 0;
-    }
-    p{
-        font-size: 17px;
-        margin: 0% 10px;
-    }
-   } 
-   .swiper-button-prev ,.swiper-button-next{
-    color:lightgray;
-    font-weight: 400;
-    font-size: 10px;
-    // padding-bottom: 50px;
-    // padding: 20px;
-    &:hover{
-        color: #6e481b;
-    }
-   }
-   .swiper-button-prev{
-    padding-right: 100px;
-   } 
-   .swiper-button-next{
-    padding-left: 100px;
-   } 
+  background-image: url("https://cdn.shopify.com/s/files/1/0436/0932/5722/articles/blog-8.jpg?v=1596440930");
+
+  /* Set a specific height */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+.testimotionals-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+  font-size: 70px;
+  padding: 150px 0;
+  font-weight: 700;
 }
-@media screen and (max-width: 576px) {
-    .swiper-container {
-      width: 300;
-    }
-  
-  }
-
-@media screen and (min-width: 576px) {
-  .swiper-container {
-    width: 576px;
-  }
-
 }
-
-
-@media screen and (min-width: 768px) {
-  .swiper-container {
-    width: 768px;
-  }
-} 
-// @media (min-width: 992px) {
-//     .swiper .swiper-slide {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       width: 100%;
-//       height: 100vh;
-//     }
-//   }

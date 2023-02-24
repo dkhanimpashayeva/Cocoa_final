@@ -8,17 +8,17 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { IconContext } from "react-icons/lib";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, getProduct } from "../../../actions/productAction";
 import { useAlert } from "react-alert";
+import { SlBasket } from "react-icons/sl";
 const Navbar = () => {
   let location = useLocation();
 
   const alert = useAlert();
   const dispatch = useDispatch();
-  const {  error, products } = useSelector((state) => state.products);
+  const { error, products } = useSelector((state) => state.products);
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -74,8 +74,8 @@ const Navbar = () => {
           }}
         >
           <div className="main-container">
-            <div className="row align-items-center justify-content-around">
-              <div className="col-lg-1 col-10 ">
+            <div className="row align-items-center ">
+              <div className="col-lg-1 col-10 col-md-5 ">
                 <div className="nav-logo">
                   <Link to="/" className="navbar-logo">
                     <img
@@ -85,9 +85,9 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-9  ">
+              <div className="col-lg-9 col-md-1 ">
                 <div className="nav-menu">
-                  <ul className="menu ">
+                  <ul className="menu">
                     <li>
                       <Link to="/">Home</Link>
                     </li>
@@ -96,21 +96,21 @@ const Navbar = () => {
                       <Link to="/newcollection">Branded Foods</Link>
                       <ul className="sub-menu">
                         <div className="row">
-                          <li className="col-lg-7">
+                          <li className="col-lg-7 col-md-7">
                             <ul className="row justify-content-between">
-                              <li className="col-lg-4">
+                              <li className="col-lg-4 col-md-4">
                                 <Link to="/products">
-                                  <h4>Dark Chocolates</h4>
+                                  <h4>Dark Choco</h4>
                                 </Link>
                               </li>
-                              <li className="col-lg-4">
+                              <li className="col-lg-4 col-md-4">
                                 <Link to="/products">
-                                  <h4>Milk chocalates</h4>
+                                  <h4>Milk Choco</h4>
                                 </Link>
                               </li>
-                              <li className="col-lg-4">
+                              <li className="col-lg-4 col-md-4">
                                 <Link to="/products">
-                                  <h4>Nutty Chocalate</h4>
+                                  <h4>Nutty Choco</h4>
                                 </Link>
                               </li>
                             </ul>
@@ -118,8 +118,8 @@ const Navbar = () => {
                             <div className="row">
                               {products &&
                                 products.map((product) => (
-                                  <li className="col-lg-4">
-                                    <Link to={`/product/${product._id}`} key={product._id}>
+                                  <li className="col-lg-4" key={product._id}>
+                                    <Link to={`/product/${product._id}`}>
                                       {product.name}
                                     </Link>
                                   </li>
@@ -176,17 +176,17 @@ const Navbar = () => {
                             <ul className="row justify-content-between">
                               <li className="col-lg-4">
                                 <Link to="/products">
-                                  <h4>Elite Chocolates</h4>
+                                  <h4>Elite Choco</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
                                 <Link to="/products">
-                                  <h4>Divine choco</h4>
+                                  <h4>Divine Choco</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
                                 <Link to="/">
-                                  <h4>Coco Magic Fudge </h4>
+                                  <h4>Coco Magic </h4>
                                 </Link>
                               </li>
                             </ul>
@@ -194,7 +194,7 @@ const Navbar = () => {
                             <div className="row">
                               {products &&
                                 products.map((product) => (
-                                  <li className="col-lg-4"  key={product._id}>
+                                  <li className="col-lg-4" key={product._id}>
                                     <Link to={`/product/${product._id}`}>
                                       {product.name}
                                     </Link>
@@ -275,7 +275,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-10 ">
+              <div className="col-lg-2 col-10 col-md-6">
                 <div className="nav-right-links">
                   <div className="d-flex align-items-center ">
                     <ul className="d-flex align-items-center ">
@@ -293,7 +293,7 @@ const Navbar = () => {
                       </li>
                       <li>
                         <span>
-                          <ShoppingCartIcon onClick={goCartHandle} />
+                          <SlBasket onClick={goCartHandle} />
                         </span>
                       </li>
                       <li>
@@ -311,7 +311,7 @@ const Navbar = () => {
         </div>
 
         <IconContext.Provider value={{ color: "#fff" }}>
-          <SidebarNav sidebar={sidebar}>
+          <SidebarNav sidebar={sidebar} className="sidebar-hidden">
             <div className="slidebar-wrap">
               <div className="nav-mobile">
                 <AiIcons.AiOutlineClose onClick={showSidebar} />

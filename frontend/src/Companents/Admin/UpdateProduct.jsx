@@ -125,7 +125,7 @@ const navigate=useNavigate()
   };
 
   return (
-    <Fragment>
+    <div className='body-dashboard'>
       <MetaData title="Update Product" />
       <div className="container">
      <div className="row">
@@ -235,7 +235,7 @@ const navigate=useNavigate()
        </div>
      </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

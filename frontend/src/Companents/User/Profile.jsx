@@ -53,8 +53,7 @@ const Profile = () => {
               </div>
 
               <div>
-                <Link to="/password/update">Change Password</Link>
-                <button onClick={logoutUser}>Logout Account</button>
+                <button onClick={logoutUser} className="logoutUser">Logout Account</button>
               </div>
             </div>
           </div>

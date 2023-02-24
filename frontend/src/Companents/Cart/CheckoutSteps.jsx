@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Typography, Stepper, StepLabel, Step } from "@material-ui/core";
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 import LibraryAddCheckIcon from "@material-ui/icons/LibraryAddCheck";
@@ -26,7 +26,7 @@ const CheckoutSteps = ({ activeStep }) => {
   };
 
   return (
-    <Fragment>
+    <div className="steps-order-comntainer">
       <Stepper alternativeLabel activeStep={activeStep} style={stepStyles}>
         {steps.map((item, index) => (
           <Step
@@ -36,7 +36,7 @@ const CheckoutSteps = ({ activeStep }) => {
           >
             <StepLabel
               style={{
-                color: activeStep >= index ? "tomato" : "rgba(0, 0, 0, 0.649)",
+                color: activeStep >= index ? "#703F07" : "rgba(0, 0, 0, 0.649)",
               }}
               icon={item.icon}
             >
@@ -45,7 +45,7 @@ const CheckoutSteps = ({ activeStep }) => {
           </Step>
         ))}
       </Stepper>
-    </Fragment>
+    </div>
   );
 };
 

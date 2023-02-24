@@ -89,7 +89,7 @@ const NewProduct = () => {
   };
 
   return (
-    <Fragment>
+    <div className='body-dashboard'>
       <MetaData title="Create Product" />
       <div className="container">
         <div className="row">
@@ -188,7 +188,7 @@ const NewProduct = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,19 +1,12 @@
 .main {
   text-align: center;
   position: relative;
-  // z-index: -999;
 }
 .thumbail-original {
-  height: 120vh;
+  height: 110vh;
   width: 100%;
 }
 .thumb-gallery-wrapper {
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 50%;
-  text-align: right;
-  // line-height: 70px;
   h1 {
     font-family: "Dancing Script", cursive;
     color: #f0c96a;
@@ -21,11 +14,16 @@
     letter-spacing: 2px;
     margin: 60px 0;
   }
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 50%;
+  text-align: right;
+
   a {
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    // padding: 18px 60px;
     cursor: pointer;
     transition: 0.3s;
     &:hover {
@@ -40,7 +38,7 @@
   padding: 90px 0 0 90px;
   background-image: url("https://cdn.shopify.com/s/files/1/0436/0932/5722/t/5/assets/shape.png?v=132468700125432870141646116847");
   background-repeat: no-repeat;
-  height: 45vh;
+  height: 43vh;
   background-size: cover;
   width: 100%;
   position: absolute;
@@ -51,19 +49,16 @@
   filter: opacity(50%);
   padding-left: 5px;
 }
-.thumbails{
+.thumbails {
   margin-top: 40px;
 }
 
-// .thumbails {
-//   padding: 20% 0;
-// }
-@media screen and (max-width: 1250px) {
- .thumbnail{
-  img{
- margin-top: 100px !important;
+@media screen and (max-width: 998px) {
+  .thumbnail {
+    img {
+      margin-top: 100px !important;
+    }
   }
- }
   .clicked {
     border: 7px solid white;
   }
@@ -71,50 +66,65 @@
     background-image: none !important;
     padding: 30px;
     margin-left: 40px;
-
   }
   .thumb-gallery-wrapper {
     padding-top: 20px;
-    top:20%;
+    top: 20%;
     width: 100%;
     text-align: center;
-    h1{
-      margin-top: 50px ;
+    h1 {
+      margin-top: 50px;
       font-size: 40px;
     }
-// a{
-//   padding: 12px 30px;
 
-// }
     .thumbail-original {
       height: 40vh !important;
       width: 100%;
     }
-  
- 
   }
 }
 
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 1400px) {
+
+  .flex_row {
+    background-image: none !important;
+  }
+  .thumb-gallery-wrapper {
+    padding-top: 20px;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    h1 {
+      margin-top: 50px !important;
+      font-size: 70px;
+    }
+
+    .thumbail-original {
+      height: 40vh !important;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
   .clicked {
     border: 3px solid white;
   }
   .thumb-gallery-wrapper {
     width: 100%;
-    top:10%;
+    top: 10%;
     text-align: center;
-    h1{
+    h1 {
       margin: 30px 0;
-      font-size: 30px;
+      font-size: 35px !important;
       padding-top: 40px;
     }
-   .thumbails{
-    margin-top: 20px;
-
-   }
-  
+    .thumbails {
+      margin-top: 20px;
+    }
   }
-  .thumbail{
+  .thumbail {
     margin-top: 50px !important;
   }
   .thumbail-original {
@@ -127,4 +137,17 @@
   }
 }
 
-    
+@media screen and (max-width: 998px) {
+  .thumbail-original {
+    height: 80vh;
+    width: 100%;
+  }
+  .hero-btn {
+    width: 40%;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 50px !important;
+    padding-top: 40px;
+  }
+}

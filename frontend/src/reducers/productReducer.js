@@ -285,7 +285,7 @@ export const reviewReducer = (state = {}, action) => {
 
 //wishlist
 export const wishlistReducer = (
-  state = { cartItems: [], shippingInfo: {} },
+  state = { wishlistItems: []},
   action
 ) => {
   switch (action.type) {
@@ -299,7 +299,7 @@ export const wishlistReducer = (
       if (isItemExist) {
         return {
           ...state,
-          cartItems: state.wishlistItems.map((i) =>
+          wishlistItems: state.wishlistItems.map((i) =>
             i.product === isItemExist.product ? item : i
           ),
         };

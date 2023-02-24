@@ -12,7 +12,10 @@
     color: white;
     background-color: #613400;
     cursor: pointer;
-    transition: 0.2s ease-in;
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+    font-weight: 700;
+    padding: 10px;
     &:hover {
       background-color: #f0c96a;
     }

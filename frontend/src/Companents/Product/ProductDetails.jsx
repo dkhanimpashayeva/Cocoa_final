@@ -17,7 +17,6 @@ import { addItemsToCart } from "./../../actions/cartAction";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../Main/TabMenu/TabMenu.scss";
 import Catagory from "../Main/Catagory/Catagory";
-import WishList from "./../../Pages/Main/WishList/WishList";
 import BestSellers from "../Main/HomeCompanents/BestSellers/BestSellers";
 import { NEW_REVIEW_RESET } from "../../constants/productConstants";
 import {
@@ -29,20 +28,15 @@ import {
 } from "@material-ui/core";
 import { Rating } from "@material-ui/lab";
 import ProductTile from "./ProductTile";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 const ProductDetails = () => {
-
   const dispatch = useDispatch();
   const alert = useAlert();
   const { id } = useParams();
-// const {productId}=useParams()
   const [open, setOpen] = useState(false);
   const [rating, setRating] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [comment, setComment] = useState("");
-
-
-
- 
 
   const { loading, error, product } = useSelector(
     (state) => state.productDetails
@@ -56,7 +50,7 @@ const ProductDetails = () => {
     readOnly: true,
     precision: 0.5,
   };
-  
+
   const increaseQuantity = () => {
     // if (product.Stock <= quantity) return;
 
@@ -80,32 +74,26 @@ const ProductDetails = () => {
     dispatch(addItemsToWishlist(id));
     alert.success("Item Added To Wishlist");
   };
-//review
-const reviewSubmitHandler = () => {
-  const myForm = new FormData();
+  //review
+  const reviewSubmitHandler = () => {
+    const myForm = new FormData();
 
-  myForm.set("rating", rating);
-  myForm.set("comment", comment);
-  myForm.set("productId", id);
+    myForm.set("rating", rating);
+    myForm.set("comment", comment);
+    myForm.set("productId", id);
 
-  dispatch(newReview(myForm));
+    dispatch(newReview(myForm));
 
-  setOpen(false);
-};
+    setOpen(false);
+  };
 
-const submitReviewToggle = () => {
-  open ? setOpen(false) : setOpen(true);
-};
-
-
-
-
-
-
+  const submitReviewToggle = () => {
+    open ? setOpen(false) : setOpen(true);
+  };
 
   useEffect(() => {
     dispatch(getProductDetails(id));
-     
+
     if (success) {
       alert.success("Review Submitted Successfully");
       dispatch({ type: NEW_REVIEW_RESET });
@@ -113,15 +101,13 @@ const submitReviewToggle = () => {
     if (error) {
       alert.error(error);
       dispatch(clearErrors());
-      
-    if (reviewError) {
-      alert.error(reviewError);
-      dispatch(clearErrors());
-    }
- 
+
+      if (reviewError) {
+        alert.error(reviewError);
+        dispatch(clearErrors());
+      }
     }
   }, [dispatch, alert, error, id]);
-
 
   return (
     <>
@@ -130,9 +116,8 @@ const submitReviewToggle = () => {
       ) : (
         <>
           <Fragment>
-
             <MetaData title={product.name} />
-            <ProductTile/>
+            <ProductTile />
             <div className="container">
               <div className="row ">
                 <div className="col-lg-3 col-12 col-md-12">
@@ -146,7 +131,7 @@ const submitReviewToggle = () => {
                           product.images.map((image) => (
                             <div key={image.public_id}>
                               <figure
-                                style={{"backgroundImage": `url(${image.url})`,}}
+                                style={{ backgroundImage: `url(${image.url})` }}
                               >
                                 <img
                                   className="d-block w-100"
@@ -202,9 +187,9 @@ const submitReviewToggle = () => {
                               <button onClick={increaseQuantity}>+</button>
                             </li>
                           </ul>
-                     
-                        <ul  className="d-flex align-items-center justify-content-between list-unstyled" >
-                        <button
+
+                          <ul className="d-flex align-items-center justify-content-between list-unstyled">
+                            <button
                               onClick={addToCartHandler}
                               className="detail-button"
                             >
@@ -216,45 +201,51 @@ const submitReviewToggle = () => {
                             >
                               Add to WishList
                             </button>
-                        </ul>
-                         
+                          </ul>
 
-                          <button className="submit-review detail-button" onClick={submitReviewToggle}>
+                          <button
+                            className="submit-review detail-button"
+                            onClick={submitReviewToggle}
+                          >
                             Submit Review
                           </button>
 
-
                           <Dialog
-            aria-labelledby="simple-dialog-title"
-            open={open}
-            onClose={submitReviewToggle}
-          >
-            <DialogTitle>Submit Review</DialogTitle>
-            <DialogContent className="submitDialog">
-              <Rating
-                onChange={(e) => setRating(e.target.value)}
-                value={rating}
-                size="large"
-              />
+                            aria-labelledby="simple-dialog-title"
+                            open={open}
+                            onClose={submitReviewToggle}
+                          >
+                            <DialogTitle>Submit Review</DialogTitle>
+                            <DialogContent className="submitDialog">
+                              <Rating
+                                onChange={(e) => setRating(e.target.value)}
+                                value={rating}
+                                size="large"
+                              />
 
-              <textarea
-                className="submitDialogTextArea"
-                cols="30"
-                rows="5"
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
-              ></textarea>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={submitReviewToggle} color="secondary">
-                Cancel
-              </Button>
-              <Button onClick={reviewSubmitHandler} color="primary">
-                Submit
-              </Button>
-            </DialogActions>
-          </Dialog>
-                          
+                              <textarea
+                                className="submitDialogTextArea"
+                                cols="30"
+                                rows="5"
+                                value={comment}
+                                onChange={(e) => setComment(e.target.value)}
+                              ></textarea>
+                            </DialogContent>
+                            <DialogActions>
+                              <Button
+                                onClick={submitReviewToggle}
+                                color="secondary"
+                              >
+                                Cancel
+                              </Button>
+                              <Button
+                                onClick={reviewSubmitHandler}
+                                color="primary"
+                              >
+                                Submit
+                              </Button>
+                            </DialogActions>
+                          </Dialog>
                         </div>
                       </div>
                     </div>
@@ -318,22 +309,16 @@ const submitReviewToggle = () => {
                     </TabPanel>
                     <TabPanel>
                       <div className="tab-panel-container">
-
-
-
                         {product.reviews && product.reviews[0] ? (
                           <div className="reviews">
                             {product.reviews &&
                               product.reviews.map((review) => (
-                                <ReviewCard review={review} key={product._id}/>
+                                <ReviewCard review={review} key={product._id} />
                               ))}
                           </div>
                         ) : (
                           <p className="noReviews">No Reviews Yet </p>
                         )}
-
-
-
                       </div>
                     </TabPanel>
                   </Tabs>
@@ -345,6 +330,7 @@ const submitReviewToggle = () => {
           <BestSellers />
         </>
       )}
+      <ScrollToTop />
     </>
   );
 };

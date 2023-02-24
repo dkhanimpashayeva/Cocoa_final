@@ -11,7 +11,7 @@ import SideBarAdmin from './SideBarAdmin';
 const Dashboard = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.products);
-  // const { orders } = useSelector((state) => state.allOrders);
+  const { orders } = useSelector((state) => state.allOrders);
 
   const { users } = useSelector((state) => state.allUsers);
   let outOfStock = 0;
@@ -23,13 +23,13 @@ const Dashboard = () => {
   }, [dispatch]);
 
   let totalAmount = 0;
-  // // orders &&
-  //   orders.forEach((item) => {
-  //     totalAmount += item.totalPrice;
-  //   });
+   orders &&
+    orders.forEach((item) => {
+      totalAmount += item.totalPrice;
+    });
 
   return (
-    <div>
+    <div className='body-dashboard'>
       <MetaData title="Dashboard - Admin Panel" />
 <div className="container">
 <div className="row">
@@ -39,14 +39,10 @@ const Dashboard = () => {
   </div>
     <div className="col-lg-8">
     <div className="dashboardContainer">
-        <Typography component="h1">Dashboard</Typography>
+        <h1>Dashboard</h1>
 
-        <div className="dashboardSummary">
-          <div>
-            <p>
-              Total Amount <br /> {totalAmount}
-            </p>
-          </div>
+        {/* <div className="dashboardSummary">
+       
           <div className="dashboardSummaryBox2">
             <Link to="/admin/products">
               <p>Product</p>
@@ -54,14 +50,14 @@ const Dashboard = () => {
             </Link>
             <Link to="/admin/orders">
               <p>Orders</p>
-              {/* <p>{orders && orders.length}</p> */}
+              <p>{orders && orders.length}</p>
             </Link>
             <Link to="/admin/users">
               <p>Users</p>
               <p>{users && users.length}</p>
             </Link>
           </div>
-        </div>
+        </div> */}
 
    
       </div>

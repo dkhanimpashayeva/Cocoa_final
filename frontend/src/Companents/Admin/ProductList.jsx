@@ -53,7 +53,7 @@ const navigate=useNavigate()
   }, [dispatch, alert, error, deleteError, isDeleted]);
 
   const columns = [
-    { field: "id", headerName: "Product ID", Width:"100%", flex: 0.12 },
+    { field: "id", headerName: "Product ID", Width:"100%", flex: 0.12  },
     {
       field: "name",
       headerName: "Name",
@@ -112,7 +112,7 @@ const navigate=useNavigate()
     });
 
   return (
-    <>
+    <div className='body-dashboard'>
       
       <MetaData title={`ALL PRODUCTS - Admin`} />
 
@@ -128,7 +128,8 @@ const navigate=useNavigate()
  
   <div className="col-lg-9 col-12 col-md-8">
 <div className="container">
-<div className="productListContainer">
+<div className="productListContainer"          
+>
           <h1 id="productListHeading">ALL PRODUCTS</h1>
           <DataGrid
             rows={rows}
@@ -144,7 +145,7 @@ const navigate=useNavigate()
         </div>
 </div>
      
-    </>
+    </div>
 
   );
 };

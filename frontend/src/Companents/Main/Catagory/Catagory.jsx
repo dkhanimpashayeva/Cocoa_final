@@ -39,7 +39,6 @@ const Catagory = () => {
           </div>
         </div>
         <NewArrivals />
-        {/* <img src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/slide3-bg-responsive_767x_59ec5563-7baf-4399-9739-9b46f88361ba.jpg?v=1646114192"/> */}
       </div>
     </>
   );

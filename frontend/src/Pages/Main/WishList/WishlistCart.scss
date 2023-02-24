@@ -1,46 +1,53 @@
-.wishlist-wrapper{
+.CartItemCard {
+  display: flex;
+  padding: 1vmax;
+  height: 10vmax;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.CartItemCard > img {
+  width: 5vmax;
+}
 
-  table{
-    border: 1px solid   #E9E9E9;;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    .item-name{
-      color: #703F07;
-      cursor: pointer;
-      &:hover{
-        color:#F0C96A;
-      }
-    }
-    .item-select{
-      color: white;
-      font-weight: 600;
-      transition: 0.3s;
-      background-color: #703F07;
-      padding: 12px 2px;
-      cursor: pointer;
-      &:hover{
-        background-color:#F0C96A;
-      }
-    }
-    th{
-      // padding: 20px 0;
+.CartItemCard > div {
+  display: flex;
+  margin: 0.3vmax 1vmax;
+  flex-direction: column;
+}
 
-      background-color: #E9E9E9;
-  width: 100% !important;
-      font-weight: 600;
-      padding: 20px 70px;
+.CartItemCard > div > a {
+  font-size: 20px;
+  color: rgba(24, 24, 24, 0.815);
+  text-decoration: none;
+}
 
-    }
- td{
-  width: 100% !important;
-  padding: 10px 50px;
-  border: 1px solid   #E9E9E9;;
+.CartItemCard > div > span {
+  color: rgba(24, 24, 24, 0.815);
+}
 
- }
-    img{
-        width: 200px;
-    }
- 
+.CartItemCard > div > p {
+  color: tomato;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .CartItemCard {
+    padding: 3vmax;
+    height: 25vmax;
+  }
+  .CartItemCard > img {
+    width: 10vmax;
+  }
+
+  .CartItemCard > div {
+    margin: 1vmax 2vmax;
+  }
+
+  .CartItemCard > div > a {
+    font: 300 2vmax cursive;
+  }
+
+  .CartItemCard > div > span {
+    font: 300 1.9vmax "Roboto";
   }
 }

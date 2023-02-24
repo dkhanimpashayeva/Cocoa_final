@@ -4,7 +4,7 @@ const ProductTile = () => {
   return (
     <section className="product-hero">
       <div className="product-hero-title">
-        <h1>Product</h1>
+        <h1>Products</h1>
         <span>Home / Product</span>
       </div>
     </section>

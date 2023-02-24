@@ -2,14 +2,14 @@ import React, { Fragment } from "react";
 import CheckoutSteps from "../Cart/CheckoutSteps";
 import { useSelector } from "react-redux";
 import "./ConfirmOrder.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Typography } from "@material-ui/core";
-import MetaData from './../layout/Meta';
-
-const ConfirmOrder = ({ history }) => {
+import MetaData from "./../layout/Meta";
+//4001007020000002
+const ConfirmOrder = () => {
   const { shippingInfo, cartItems } = useSelector((state) => state.cart);
   const { user } = useSelector((state) => state.user);
-
+  const navigate = useNavigate();
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.quantity * item.price,
     0
@@ -33,7 +33,7 @@ const ConfirmOrder = ({ history }) => {
 
     sessionStorage.setItem("orderInfo", JSON.stringify(data));
 
-    history.push("/process/payment");
+    navigate("/process/payment");
   };
 
   return (
@@ -70,8 +70,8 @@ const ConfirmOrder = ({ history }) => {
                       {item.name}
                     </Link>{" "}
                     <span>
-                      {item.quantity} X ₹{item.price} ={" "}
-                      <b>₹{item.price * item.quantity}</b>
+                      {item.quantity} X {item.price} ={" "}
+                      <b>{item.price * item.quantity}</b>
                     </span>
                   </div>
                 ))}
@@ -85,15 +85,15 @@ const ConfirmOrder = ({ history }) => {
             <div>
               <div>
                 <p>Subtotal:</p>
-                <span>₹{subtotal}</span>
+                <span>{subtotal}</span>
               </div>
               <div>
                 <p>Shipping Charges:</p>
-                <span>₹{shippingCharges}</span>
+                <span>{shippingCharges}</span>
               </div>
               <div>
                 <p>GST:</p>
-                <span>₹{tax}</span>
+                <span>{tax}</span>
               </div>
             </div>
 
@@ -101,7 +101,7 @@ const ConfirmOrder = ({ history }) => {
               <p>
                 <b>Total:</b>
               </p>
-              <span>₹{totalPrice}</span>
+              <span>{totalPrice}</span>
             </div>
 
             <button onClick={proceedToPayment}>Proceed To Payment</button>

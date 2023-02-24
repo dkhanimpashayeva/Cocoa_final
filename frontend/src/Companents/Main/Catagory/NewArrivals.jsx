@@ -41,7 +41,7 @@ const NewArrivals = ({product}) => {
               },
               768: {
                 // width: 768,
-                slidesPerView: 1,
+                slidesPerView: 2,
               },
               992: {
                 slidesPerView: 1,
@@ -53,8 +53,8 @@ const NewArrivals = ({product}) => {
          
             {products && products.map(product=>(
 
-<SwiperSlide>
-<ProductCard product={product} key={product}/>
+<SwiperSlide key={product._id}>
+<ProductCard product={product} />
 
 
 </SwiperSlide>

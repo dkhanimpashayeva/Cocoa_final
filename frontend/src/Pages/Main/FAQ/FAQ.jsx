@@ -1,16 +1,19 @@
-import React from 'react'
-import FaqAccordion from '../../../Companents/Main/FAQ/FaqAccordion/FaqAccordion'
-import FaqHero from '../../../Companents/Main/FAQ/FaqHero'
-import ScrollToTop from '../../../Companents/ScrollToTop/ScrollToTop'
+import React from "react";
+import FaqAccordion from "../../../Companents/Main/FAQ/FaqAccordion/FaqAccordion";
+import FaqHero from "../../../Companents/Main/FAQ/FaqHero";
+import ScrollToTop from "../../../Companents/ScrollToTop/ScrollToTop";
+import MetaData from './../../../Companents/layout/Meta';
 
 const FAQ = () => {
   return (
     <div>
-<FaqHero/>
-<FaqAccordion/>
-<ScrollToTop/>
-    </div>
-  )
-}
+      <MetaData title="FAQ" />
 
-export default FAQ
+      <FaqHero />
+      <FaqAccordion />
+      <ScrollToTop />
+    </div>
+  );
+};
+
+export default FAQ;
