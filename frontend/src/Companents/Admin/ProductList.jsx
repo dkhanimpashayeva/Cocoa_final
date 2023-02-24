@@ -57,14 +57,12 @@ const navigate=useNavigate()
     {
       field: "name",
       headerName: "Name",
-      // // minWidth: 200,
       flex: 0.2,
     },
     {
       field: "stock",
       headerName: "Stock",
       type: "number",
-      // minWidth: 150,
       flex: 0.3,
     },
 
@@ -72,7 +70,6 @@ const navigate=useNavigate()
       field: "price",
       headerName: "Price",
       type: "number",
-      // minWidth: 200,
       flex: 0.3,
     },
 

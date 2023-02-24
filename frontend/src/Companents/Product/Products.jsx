@@ -12,7 +12,6 @@ import { useParams } from "react-router";
 import MetaData from "../MetaData";
 import ProductCard from './ProductCard';
 import Loader from "../Loader/Loader";
-import OurGallery from "../Main/OurGallery/OurGallery";
 import VideoInfoBottom from "../Main/HomeCompanents/VideoInfo/VideoInfoBottom";
 
 const categories = [
@@ -127,7 +126,7 @@ const { keyword } = useParams();
        <div className="row">
        {products &&
               products.map((product) => (
-                <div className="col-lg-4 col-6 col-6">
+                <div className="col-lg-4 col-6 col-6" key={product._id}>
                                   <ProductCard key={product._id} product={product} />
 
                 </div>

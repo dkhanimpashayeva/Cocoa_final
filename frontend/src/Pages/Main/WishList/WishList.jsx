@@ -59,7 +59,7 @@
 
 import React, { Fragment } from "react";
 import WishlistItemCart from "./WishlistItemCart";
-import { RemoveShoppingCartIcon } from "@material-ui/icons/RemoveShoppingCart";
+// import { RemoveShoppingCartIcon } from "@material-ui/icons/RemoveShoppingCart";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -67,7 +67,7 @@ import {
   addItemsToWishlist,
   removeItemsFromWishlist,
 } from "../../../actions/productAction";
-import CartItemCard from "../../../Companents/Cart/CartItemCard";
+// import CartItemCard from "../../../Companents/Cart/CartItemCard";
 import HeartBrokenOutlinedIcon from "@mui/icons-material/HeartBrokenOutlined";
 import WishlistTitle from "./WishlistTitle";
 import "./Wishlist.scss";

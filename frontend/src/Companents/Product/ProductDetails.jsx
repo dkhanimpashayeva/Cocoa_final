@@ -40,13 +40,7 @@ const ProductDetails = () => {
   const [quantity, setQuantity] = useState(1);
   const [comment, setComment] = useState("");
 
-  const handleMouseMove = e => {
-    const { left, top, width, height } = e.target.getBoundingClientRect()
-    const x = (e.pageX - left) / width * 100
-    const y = (e.pageY - top) / height * 100
-    this.setState({ backgroundPosition: `${x}% ${y}%` })
 
-  }
 
  
 
@@ -83,7 +77,7 @@ const ProductDetails = () => {
   // addToWishlistHandler
 
   const addToWishlistHandler = () => {
-    dispatch(addItemsToWishlist(id, quantity));
+    dispatch(addItemsToWishlist(id));
     alert.success("Item Added To Wishlist");
   };
 //review
@@ -152,7 +146,6 @@ const submitReviewToggle = () => {
                           product.images.map((image) => (
                             <div key={image.public_id}>
                               <figure
-                                onMouseMove={handleMouseMove}
                                 style={{"backgroundImage": `url(${image.url})`,}}
                               >
                                 <img
@@ -332,7 +325,7 @@ const submitReviewToggle = () => {
                           <div className="reviews">
                             {product.reviews &&
                               product.reviews.map((review) => (
-                                <ReviewCard review={review} />
+                                <ReviewCard review={review} key={product._id}/>
                               ))}
                           </div>
                         ) : (

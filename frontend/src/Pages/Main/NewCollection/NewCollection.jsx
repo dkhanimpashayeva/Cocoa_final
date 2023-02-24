@@ -100,7 +100,7 @@ const NewCollection = () => {
         ) : (
           <div id="products" className="row ">
             {products&&products.map((product) => (
-                <div className=" item col-lg-4 col-6 col-md-6">
+                <div className=" item col-lg-4 col-6 col-md-6" key={product._id}>
                   <ProductCard product={product} />
                 </div>
               ))}

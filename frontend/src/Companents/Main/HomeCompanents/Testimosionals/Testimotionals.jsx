@@ -133,7 +133,7 @@ const Testimotionals = () => {
       <div className="testimotionals-card">
             <div className="client-image">
               <img
-                src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/testi02_200x200.png?v=1646644386"
+                src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/testi01_200x200.png?v=1646644356"
                 alt="client"
               />
             </div>
@@ -189,7 +189,7 @@ const Testimotionals = () => {
       <div className="testimotionals-card">
             <div className="client-image">
               <img
-                src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/testi02_200x200.png?v=1646644386"
+                src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/testi05_200x200.png?v=1646644415"
                 alt="client"
               />
             </div>

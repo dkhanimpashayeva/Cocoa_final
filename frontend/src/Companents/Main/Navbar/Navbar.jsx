@@ -1,10 +1,9 @@
-import { FaBars, FaRegHeart } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { FaAlignRight } from "react-icons/fa";
 import "./Navbar.scss";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
@@ -12,7 +11,6 @@ import SubMenu from "./SubMenu";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { IconContext } from "react-icons/lib";
 import { useDispatch, useSelector } from "react-redux";
-import NavList from "./NavList";
 import { clearErrors, getProduct } from "../../../actions/productAction";
 import { useAlert } from "react-alert";
 const Navbar = () => {
@@ -20,7 +18,7 @@ const Navbar = () => {
 
   const alert = useAlert();
   const dispatch = useDispatch();
-  const { loading, error, products } = useSelector((state) => state.products);
+  const {  error, products } = useSelector((state) => state.products);
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -121,7 +119,7 @@ const Navbar = () => {
                               {products &&
                                 products.map((product) => (
                                   <li className="col-lg-4">
-                                    <Link to={`/product/${product._id}`}>
+                                    <Link to={`/product/${product._id}`} key={product._id}>
                                       {product.name}
                                     </Link>
                                   </li>
@@ -196,7 +194,7 @@ const Navbar = () => {
                             <div className="row">
                               {products &&
                                 products.map((product) => (
-                                  <li className="col-lg-4">
+                                  <li className="col-lg-4"  key={product._id}>
                                     <Link to={`/product/${product._id}`}>
                                       {product.name}
                                     </Link>

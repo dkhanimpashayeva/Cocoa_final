@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Link} from 'react-router-dom'
+import Button from "../../Button/Button";
 const ImageSliderCompanent = () => {
   const imgs = [
     {
@@ -46,9 +46,8 @@ const ImageSliderCompanent = () => {
                 <span>{wordData.titleUnder}</span>
                 </h1>
 
-                <div className="thumb-gallery-button">
-                  <Link to='/'>{wordData.thumbBtn}</Link>
-                </div>
+                  {/* <Link to='/'>{wordData.thumbBtn}</Link> */}
+                  <Button/>
               </div>
         <img
           src={wordData.value}

@@ -5,7 +5,17 @@
     background-color: white;
     top: 0px;
     padding: 20px 0;
-    // height: 100vh;
+    a {
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      font-size: 15px;
+      cursor: pointer;
+      &:hover{
+        color:#E9C164;
+      }
+   
+    }
     img{
       height: 100%;
       width: 100%;
@@ -27,17 +37,7 @@
           font-size: 20px;
         }
       }
-      .accordion-content {
-        background-color: white;
-        color: black;
-        padding: 5px 10px;
-        font-size: 15px;
-        cursor: pointer;
-        &:hover{
-          color:#E9C164;
-        }
-     
-      }
+ 
       .accordion-btn {
         cursor: pointer;
         font-weight: 700;

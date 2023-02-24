@@ -1,35 +1,31 @@
-
-
-
-.products-wrapper{
-  .category-link{
+.products-wrapper {
+  .category-link {
     cursor: pointer;
     color: #663300;
-    font-family: 'Dancing Script', cursive;
-font-size: 20px;
-    
-font-weight: 700;
-      &:hover{
-        color: #F0C96A;
-      }
-    
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+
+    font-weight: 700;
+    &:hover {
+      color: #f0c96a;
+    }
   }
-  fieldset{
+  fieldset {
     position: sticky;
     top: 20px;
   }
   width: 90%;
   margin: 14% auto;
-  h2{
+  h2 {
     text-align: center;
   }
-  .products-titles{
+  .products-titles {
     font-size: 30px;
-    font-family: 'Dancing Script', cursive;
+    font-family: "Dancing Script", cursive;
     color: #663300;
   }
-.slider-products{
-  color: #663300;
-  font-size: 70px;
-}
+  .slider-products {
+    color: #663300;
+    font-size: 70px;
+  }
 }

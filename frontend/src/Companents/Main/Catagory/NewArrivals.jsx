@@ -1,6 +1,4 @@
 import React from 'react'
-import ReactStars from 'react-rating-stars-component';
-import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from './../../Product/ProductCard';
 import { useAlert } from 'react-alert';
@@ -56,7 +54,7 @@ const NewArrivals = ({product}) => {
             {products && products.map(product=>(
 
 <SwiperSlide>
-<ProductCard product={product}/>
+<ProductCard product={product} key={product}/>
 
 
 </SwiperSlide>

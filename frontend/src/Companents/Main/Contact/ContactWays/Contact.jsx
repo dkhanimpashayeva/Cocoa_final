@@ -4,6 +4,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { BsFillEnvelopeFill } from "react-icons/bs";
 
 import { IoIosSend } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -18,9 +19,11 @@ const Contact = () => {
 </div>
               <div className="contact-info">
                 <h4>Phone</h4>
-                <span>0803 - 080 - 3081</span>
+                <span> <Link to="tel:9876543210">9876543210</Link>
+</span>
+
                 <br />
-                <span>0803 - 080 - 3082</span>
+                <span> <Link to="tel:9876543210">9876543210</Link></span>
               </div>
             </div>
           </div>

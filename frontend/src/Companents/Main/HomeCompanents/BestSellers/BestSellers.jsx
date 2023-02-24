@@ -56,10 +56,10 @@ const BestSellers = () => {
             onSlideChange={() => console.log("slide change")}
           >
          
-            {products && products.map(product=>(
+            {products && products.map((product,index)=>(
 
-<SwiperSlide>
-<ProductCard product={product}/>
+<SwiperSlide key={product._id}>
+<ProductCard product={product} />
 
 
 </SwiperSlide>

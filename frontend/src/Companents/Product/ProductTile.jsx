@@ -1,5 +1,5 @@
-import React from 'react'
-import './ProductTitle.scss'
+import React from "react";
+import "./ProductTitle.scss";
 const ProductTile = () => {
   return (
     <section className="product-hero">
@@ -8,7 +8,7 @@ const ProductTile = () => {
         <span>Home / Product</span>
       </div>
     </section>
-    )
-}
+  );
+};
 
-export default ProductTile
+export default ProductTile;

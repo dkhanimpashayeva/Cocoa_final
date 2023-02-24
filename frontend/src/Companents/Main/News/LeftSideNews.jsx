@@ -1,8 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './LeftSideNews.scss'
-import HeroSlider from './../HomeCompanents/HeroSlider/HeroSlider';
-import BestSellers from './../HomeCompanents/BestSellers/BestSellers';
 const LeftSideNews = () => {
   return (
     <div className='left-side-news'>

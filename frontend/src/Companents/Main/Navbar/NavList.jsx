@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const NavList = () => {
-    const { loading, error, product } = useSelector(
+    const { product } = useSelector(
         (state) => state.productDetails
       );
   return (

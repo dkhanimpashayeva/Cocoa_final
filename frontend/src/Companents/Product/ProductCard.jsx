@@ -25,14 +25,26 @@ const ProductCard = ({product}) => {
     isHalf: true,
   };
 
+  const increaseQuantity = () => {
+
+    const qty = quantity + 1;
+    setQuantity(qty);
+  };
   const addToCartHandler = () => {
     dispatch(addItemsToCart(id, quantity));
     alert.success("Item Added To Cart");
+    increaseQuantity()
   };
   const addToWishlistHandler = () => {
     dispatch(addItemsToWishlist(id,quantity));
     alert.success("Item Added To Wishlist");
   };
+
+
+
+
+
+
   return (
     <div>
       <Link className="productCard" to={`/product/${product._id}`}>
@@ -67,7 +79,10 @@ const ProductCard = ({product}) => {
                   <Link to='/search'>    <BiSearch /></Link>
                     </span>
                     <span>
-                      <HiOutlineSquare2Stack />
+                      <HiOutlineSquare2Stack/>
+      
+    
+
                     </span>
                   </div>
                 </div>

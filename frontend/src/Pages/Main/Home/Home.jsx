@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Abouthero from "../../../Companents/Main/HomeCompanents/Abouthero";
 import BestSellers from "../../../Companents/Main/HomeCompanents/BestSellers/BestSellers";
 import CakesSweets from "../../../Companents/Main/HomeCompanents/CakesSweets/CakesSweets";
