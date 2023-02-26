@@ -49,7 +49,7 @@ const ImageSliderCompanent = () => {
 
           <Button  className="hero-btn"/>
         </div>
-        <img src={wordData.value} className="thumbail-original" />
+        <img src={wordData.value} className="thumbail-original" style={{width:"100%",objectFit:"cover"}}/>
 
         <div className="flex_row">
           {imgs.map((data, i) => (

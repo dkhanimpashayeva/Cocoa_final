@@ -1,18 +1,17 @@
 .LoginSignUpContainer {
   width: 90%;
   height: 100vh;
-  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
-  margin:70px  40px;
-
+  margin: 70px 40px;
+  padding-top: 100px;
 }
 
 .LoginSignUpBox {
   background-color: #f7f7f7;
-  padding:10px 20px ;
+  padding: 10px 20px;
   width: 50%;
   height: 70vh;
   box-sizing: border-box;

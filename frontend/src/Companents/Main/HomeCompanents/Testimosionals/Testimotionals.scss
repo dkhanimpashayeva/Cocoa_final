@@ -1,9 +1,7 @@
 .testimotionals{
   background-image: url("https://cdn.shopify.com/s/files/1/0436/0932/5722/articles/blog-8.jpg?v=1596440930");
 
-  /* Set a specific height */
-
-  /* Create the parallax scrolling effect */
+ 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -15,8 +13,15 @@
   align-items: center;
   justify-content: center;
   color:white;
-  font-size: 70px;
+  font-size: 60px !important;
   padding: 150px 0;
   font-weight: 700;
+}
+}
+
+@media screen and (max-width:778px) {
+  .testimotionals-title{
+    font-size: 20px !important;
+    font-weight: 500;
 }
 }
