@@ -1,0 +1,106 @@
+.main {
+  text-align: center;
+  position: relative;
+}
+
+.thumbail-original {
+  height: 120vh;
+  width: 100%;
+}
+
+.thumb-gallery-wrapper {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 50%;
+  text-align: right;
+  line-height: 70px;
+}
+.thumb-gallery-wrapper h1 {
+  font-family: "Dancing Script", cursive;
+  color: #f0c96a;
+  font-size: 80px;
+  letter-spacing: 2px;
+  margin: 60px 0;
+}
+.thumb-gallery-wrapper a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 18px 60px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.thumb-gallery-wrapper a:hover {
+  background-color: #f0c76e;
+}
+
+.flex_row {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 90px 0 0 90px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0436/0932/5722/t/5/assets/shape.png?v=132468700125432870141646116847");
+  background-repeat: no-repeat;
+  height: 45vh;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+}
+
+.image-thumbnail {
+  filter: opacity(50%);
+  padding-left: 5px;
+}
+
+.thumbails {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 1250px) {
+  .clicked {
+    border: 7px solid white;
+  }
+  .flex_row {
+    background-image: none !important;
+    padding: 30px;
+    margin-left: 40px;
+  }
+  .thumb-gallery-wrapper {
+    top: 20%;
+    width: 100%;
+    text-align: center;
+  }
+  .thumb-gallery-wrapper h1 {
+    font-size: 70px;
+  }
+  .thumb-gallery-wrapper .thumbail-original {
+    height: 40vh !important;
+    width: 100%;
+  }
+  .thumb-gallery-wrapper h1 {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .clicked {
+    border: 7px solid white;
+  }
+  .thumb-gallery-wrapper {
+    width: 100%;
+    top: 10%;
+    text-align: center;
+  }
+  .thumb-gallery-wrapper h1 {
+    font-size: 50px;
+  }
+  .thumbail-original {
+    height: 70vh !important;
+    width: 100%;
+  }
+  .flex_row {
+    background-image: none !important;
+  }
+}/*# sourceMappingURL=HeroSlider.css.map */

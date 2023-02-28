@@ -1,0 +1,17 @@
+const image1 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-08_ab7a4173-add3-474c-be9f-0ea38e47c326.jpg?v=1646122955";
+const image2 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-07_656ee781-8088-4cfd-b53a-cd67db14db21.jpg?v=1646123047";
+const image3 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-03_3c91f85c-6087-4af7-a9cc-7779f702be6a.jpg?v=1646123111";
+const image4 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-05_1.jpg?v=1646123198";
+const image5 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-01.jpg?v=1613238250";
+const image6 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-06_1.jpg?v=1646123303";
+const image7 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-02_c650d103-4289-4656-9d8f-672c22cf755f.jpg?v=1646123268";
+const image8 =
+"https://cdn.shopify.com/s/files/1/0436/0932/5722/files/home-gallery-04_288c7af6-38cd-43ec-83a7-00fe393ab564.jpg?v=1646123348";
+ export const images = [image1, image2, image3, image4, image5, image6,image7,image8];

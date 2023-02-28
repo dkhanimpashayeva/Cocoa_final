@@ -1,0 +1,40 @@
+.about-page {
+  color: white;
+  text-align: center;
+  background-color: #030303;
+  padding: 100px 0;
+  text-align: center;
+
+  span {
+    font-size: 17px;
+  }
+  h1 {
+    font-family: "Dancing Script", cursive;
+  }
+}
+.about-images {
+  padding: 50px 0;
+  .about-main-image {
+    height: 90vh;
+  }
+  img {
+    width: 100%;
+    margin: 20px;
+    cursor: pointer;
+    height: 42vh;
+    &:hover {
+      filter: contrast(50%);
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-main-image {
+    height: 42vh !important;
+  }
+}
+@media screen and (max-width: 778px) {
+  .about-main-image {
+    height: 42vh !important;
+  }
+}

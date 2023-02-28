@@ -1,0 +1,21 @@
+.about-hero{
+  width: 100%;
+}
+.about-hero-wrapper {
+  padding: 30px 0;
+  background-image: url("../../../media/about.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: contain;
+  padding-right: 0%;
+  background-position: right;
+  .about-hero-info {
+   
+    padding: 50px 10px;
+    background-color:rgba(256,256,256,0.7);
+    line-height: 35px;
+    h2{
+        margin: 30px 0;
+    }
+  }
+}

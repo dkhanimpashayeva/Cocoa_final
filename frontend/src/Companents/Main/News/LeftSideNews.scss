@@ -1,0 +1,43 @@
+.left-side-news{
+    hr{
+        height: 2px;
+        width: 100%;
+        background-color: #663300;
+
+    }
+}
+.resent-articles{
+    margin: 20px 0;
+    .resent-articles-info{
+        margin-top: 30px;
+        img{
+            width: 100%;
+        }
+        a{
+            font-size: 20px;
+            text-decoration: none;
+            font-family: 'Dancing Script', cursive;
+            color: #663300;
+            &:hover{
+                color:#F0C76E;
+            }
+        }
+    }
+
+}
+.news-tags{
+    ul{
+        list-style: none;
+        padding-left: 0%;
+        text-decoration: left;
+        li{
+            font-size: 18px;
+            margin-top: 20px;
+            color: #663300;
+            cursor: pointer;
+            &:hover{
+                color:#F0C76E;
+            }
+        }
+    }
+}

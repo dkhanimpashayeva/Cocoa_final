@@ -1,0 +1,96 @@
+.best-sellers {
+  padding: 50px 0;
+}
+.best-sellers .best-sellers-wrapper {
+  padding: 40px 0;
+}
+.best-sellers .best-sellers-wrapper .product-container {
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.best-sellers .best-sellers-wrapper .product-container img {
+  width: 100%;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-name {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-name:hover {
+  color: #f0c96a;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-price span {
+  font-size: 18px;
+  font-weight: 600;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-overlay-image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  visibility: hidden;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-overlay-image img {
+  filter: brightness(50%);
+  width: 100%;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-btns {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  align-items: center;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-btns span {
+  border-radius: 50%;
+  background-color: white;
+  color: #663300;
+  margin: 0 2px;
+  padding: 6px 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.best-sellers .best-sellers-wrapper .product-container .product-btns span:hover {
+  background-color: #663300;
+  color: #f0c96a;
+}
+.best-sellers .best-sellers-wrapper .product-container:hover .product-overlay-image {
+  visibility: visible;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: lightgray !important;
+  font-weight: 300 !important;
+  font-size: 10px !important;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #6e481b !important;
+}
+
+.swiper-button-prev {
+  padding-right: 100px;
+}
+
+.swiper-button-next {
+  padding-left: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .swiper-container {
+    width: 300;
+  }
+}
+@media screen and (min-width: 576px) {
+  .swiper-container {
+    width: 576px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}/*# sourceMappingURL=BestSellers.css.map */

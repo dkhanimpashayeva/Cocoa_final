@@ -1,0 +1,57 @@
+.ourteams {
+  text-align: center;
+  padding: 40px 0;
+  .our-teams-card {
+    position: relative;
+    margin: 30px 0;
+    h4,
+    span {
+      font-family: "Dancing Script", cursive;
+      margin-top: 20px;
+    }
+    h4 {
+      color: #613400;
+    }
+    span {
+      color: #f0c96a;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    &:hover {
+      img {
+        transform: scale(0.9);
+      }
+      .contact-team {
+        visibility: visible;
+      }
+    }
+    img {
+      border-radius: 50%;
+      height: 30vh;
+      border: 7px solid #613400;
+      z-index: -999 !important;
+      transition: 0.3s ease-in-out;
+    }
+    .contact-team-box {
+      position: absolute;
+      bottom: 30%;
+      left: 10%;
+      right: 10%;
+      margin: 0 10px;
+      z-index: 999 !important;
+    }
+    .contact-team {
+      color: #613400;
+      font-size: 25px;
+      margin: 0 10px;
+      padding: 0 5px;
+      background-color: white;
+      cursor: pointer;
+      visibility: hidden;
+      &:hover {
+        background-color: #613400;
+        color: white;
+      }
+    }
+  }
+}

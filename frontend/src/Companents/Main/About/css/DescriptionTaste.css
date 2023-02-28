@@ -1,0 +1,26 @@
+.description-taste {
+  padding: 40px 0;
+  padding: 50px 0;
+}
+.description-taste .description-taste-title {
+  text-align: center;
+  line-height: 40px;
+  margin: 40px 0;
+}
+.description-taste img {
+  width: 100%;
+  height: 80vh;
+  cursor: pointer;
+}
+.description-taste img:hover {
+  filter: grayscale(30%);
+}
+.description-taste h3 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  color: #ba8d69;
+}
+.description-taste p {
+  line-height: 30px;
+  padding: 20px 0;
+}/*# sourceMappingURL=DescriptionTaste.css.map */

@@ -1,0 +1,33 @@
+.footer-bottom {
+  width: 100%;
+  padding-top: 20px;
+  background-color: #613400;
+  color: white;
+  font-size: 15px;
+
+
+    ul {
+margin-left: 25%;
+
+      li {
+        margin-left: 5px;
+        svg {
+          text-align: center;
+          display: inline-block;
+
+
+        }
+      }
+    }
+  
+}
+@media screen and (max-width: 778px){
+  .footer-bottom{
+    line-height: 30px;
+    span{
+      margin-left: 30px;
+        }
+     
+  }
+
+}

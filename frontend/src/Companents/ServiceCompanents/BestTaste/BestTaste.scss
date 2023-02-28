@@ -1,0 +1,26 @@
+.best-taste {
+  padding: 40px 0;
+  .best-taste-description {
+    padding: 30px 0;
+    line-height: 60px;
+    .gitlab {
+      font-size: 20px;
+      color: #794c1f;
+    }
+    .best-taste-info {
+      margin-left: 30px;
+      h6 {
+        font-size: 30px;
+        font-family: "Dancing Script", cursive;
+        color: #794c1f;
+        cursor: pointer;
+        &:hover {
+          color: #f0c96a;
+        }
+      }
+    }
+  }
+  img { 
+    width: 100%;
+  }
+}

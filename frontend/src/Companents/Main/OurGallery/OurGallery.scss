@@ -1,0 +1,88 @@
+.gallery{
+  padding: 60px 0;
+  width: 100%;
+
+}
+
+.gallery-card {
+  margin: 10px 0;
+  position: relative;
+  transition: 0.3s ease;
+  text-align: center;
+
+  .gallery-card-image {
+    // height: 250px;
+    width: 100%;
+  }
+  .modal-search {
+    transition: 0.3s ease-in;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    color: #663300;
+    background-color: white;
+    padding: 8px 12px;
+    visibility: hidden;
+    font-weight: 700;
+    border: none;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    &:hover {
+      color: white;
+      background-color: #eec668;
+    }
+  }
+  &:hover {
+    .gallery-card-image {
+      filter: brightness(50%);
+    }
+    .modal-search {
+      visibility: visible;
+    }
+  }
+}
+.image-card {
+
+  object-fit: cover;
+}
+
+#lightbox-img {
+ 
+  object-fit: cover;
+}
+
+#lightbox {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+/*Completely optional styling that has nothing to do with the lightbox*/
+button {
+  color: white;
+  border: 2px solid #703F07;
+  background-color: #703F07;
+  font-size: 1.2rem;
+}
+
+
+
+img:hover, button:hover {
+  cursor: pointer;
+}
+
+
+

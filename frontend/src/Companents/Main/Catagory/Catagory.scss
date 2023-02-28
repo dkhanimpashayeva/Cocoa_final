@@ -1,0 +1,51 @@
+.catagory-wrapper{
+    text-align: left;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: white;
+    top: 0px;
+    padding: 20px 0;
+    // height: 100vh;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+    // bottom:0;
+    p{
+        font-size: 15px;
+    }
+    .accordion-tab {
+      position: sticky;
+      top:0px;
+        color:#703f07;
+        margin: 15px 0;
+        cursor: pointer;
+        &:hover{
+          color:#E9C164;
+        }
+        .accordion-title {
+          font-size: 20px;
+        }
+      }
+      .accordion-content {
+        background-color: white;
+        color: black;
+        padding: 5px 10px;
+        font-size: 15px;
+        cursor: pointer;
+        &:hover{
+          color:#E9C164;
+        }
+     
+      }
+      .accordion-btn {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 25px;
+        transition: 0.3s;
+      }
+}
+.catagory-title{
+  margin: 20px 0;
+  font-size: 10px;
+}

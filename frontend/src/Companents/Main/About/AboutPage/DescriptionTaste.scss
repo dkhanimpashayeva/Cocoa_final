@@ -1,0 +1,28 @@
+.description-taste {
+    padding: 40px 0;
+  .description-taste-title {
+    text-align: center;
+    line-height: 40px;
+    margin: 40px 0;
+  }
+  padding: 50px 0;
+  img {
+    width: 100%;
+    height: 80vh;
+    cursor: pointer; 
+    &:hover{
+        filter: grayscale(30%);
+
+    }
+  }
+  h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: #ba8d69;
+  }
+  p {
+    line-height: 30px;
+    padding: 20px 0;
+  }
+}
+
