@@ -23,7 +23,7 @@ const productSchema = mongoose.Schema({
     {
       public_id: {
         type: String,
-        required: true,
+        // required: true,
       },
       url: {
         type: String,
@@ -33,7 +33,7 @@ const productSchema = mongoose.Schema({
   ],
   imagesOver: {
       type: String,
-      required: true,
+      // required: true,
     },
 
   category: {

@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import "./NewProduct.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, createProduct } from "../../actions/productAction";
 import { useAlert } from "react-alert";
@@ -8,16 +9,14 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import StorageIcon from "@material-ui/icons/Storage";
 import SpellcheckIcon from "@material-ui/icons/Spellcheck";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import SideBarAdmin from "./SideBarAdmin";
 import { NEW_PRODUCT_RESET } from "../../constants/productConstants";
 import MetaData from "../MetaData";
-import { useNavigate } from "react-router";
-import './NewProduct.scss';
-import SidebarAdmin from "./SideBarAdmin";
 
-const NewProduct = () => {
+const NewProduct = ({ history }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
-const navigate=useNavigate()
+
   const { loading, error, success } = useSelector((state) => state.newProduct);
 
   const [name, setName] = useState("");
@@ -25,17 +24,17 @@ const navigate=useNavigate()
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [Stock, setStock] = useState(0);
-  const [images, setImages] = useState([0]);
-  // const [imagesPreview, setImagesPreview] = useState([]);
+  const [images, setImages] = useState([]);
+  const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Best Sellers",
-    "Milky Chocolates",
-    "Nutty Chocolates",
-    "Dark Chocolates",
-    "Elite Chocolates",
-    "Divine Creations",
-    "Coco Magic Fudge",
+    "Laptop",
+    "Footwear",
+    "Bottom",
+    "Tops",
+    "Attire",
+    "Camera",
+    "SmartPhones",
   ];
 
   useEffect(() => {
@@ -46,10 +45,10 @@ const navigate=useNavigate()
 
     if (success) {
       alert.success("Product Created Successfully");
-      navigate("/admin/dashboard");
+      history.push("/admin/dashboard");
       dispatch({ type: NEW_PRODUCT_RESET });
     }
-  }, [dispatch, alert, error,  success]);
+  }, [dispatch, alert, error, history, success]);
 
   const createProductSubmitHandler = (e) => {
     e.preventDefault();
@@ -61,8 +60,10 @@ const navigate=useNavigate()
     myForm.set("description", description);
     myForm.set("category", category);
     myForm.set("Stock", Stock);
-myForm.set("images",images[0].url)
-   
+
+    images.forEach((image) => {
+      myForm.append("images", image);
+    });
     dispatch(createProduct(myForm));
   };
 
@@ -70,30 +71,27 @@ myForm.set("images",images[0].url)
     const files = Array.from(e.target.files);
 
     setImages([]);
-    // setImagesPreview([]);
+    setImagesPreview([]);
 
-    // files.forEach((file) => {
-    //   const reader = new FileReader();
+    files.forEach((file) => {
+      const reader = new FileReader();
 
-    //   // reader.onload = () => {
-    //   //   if (reader.readyState === 1) {
-    //   //     setImagesPreview((old) => [...old, reader.result]);
-    //   //     setImages((old) => [...old, reader.result]);
-    //   //   }
-    //   // };
+      reader.onload = () => {
+        if (reader.readyState === 2) {
+          setImagesPreview((old) => [...old, reader.result]);
+          setImages((old) => [...old, reader.result]);
+        }
+      };
 
-    //   reader.readAsDataURL(file);
-    // });
+      reader.readAsDataURL(file);
+    });
   };
 
   return (
     <Fragment>
       <MetaData title="Create Product" />
-      <div className="row">
-        <div className="col-lg-3 col-md-3 col-12">
-          <SidebarAdmin/>
-        </div>
-        <div className="col-lg-9 col-md-9 col-12">
+      <div className="dashboard">
+        <SideBarAdmin />
         <div className="newProductContainer">
           <form
             className="createProductForm"
@@ -158,21 +156,19 @@ myForm.set("images",images[0].url)
 
             <div id="createProductFormFile">
               <input
-                type="url"
+                type="file"
                 name="avatar"
                 accept="image/*"
-                onChange={(e) => setName(e.target.images.url)}
-
-                // onChange={createProductImagesChange}
+                onChange={createProductImagesChange}
                 multiple
               />
             </div>
 
-             <div id="createProductFormImage">
-                <img  src={images[0].url} alt="Product Preview" />
-            </div> 
-
-
+            <div id="createProductFormImage">
+              {imagesPreview.map((image, index) => (
+                <img key={index} src={image} alt="Product Preview" />
+              ))}
+            </div>
 
             <Button
               id="createProductBtn"
@@ -182,7 +178,6 @@ myForm.set("images",images[0].url)
               Create
             </Button>
           </form>
-        </div>
         </div>
       </div>
     </Fragment>

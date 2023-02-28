@@ -15,12 +15,12 @@ import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants";
 import SidebarAdmin from "./SideBarAdmin";
 import MetaData from "../MetaData";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
-const UpdateProduct = ({ history}) => {
+const UpdateProduct = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
-
+const navigate=useNavigate()
   const { error, product } = useSelector((state) => state.productDetails);
 
   const {
@@ -48,8 +48,7 @@ const UpdateProduct = ({ history}) => {
     "SmartPhones",
   ];
 
-  const productId =useParams()
-  // const productId = match.params.id;
+   const {productId} = useParams();
 
   useEffect(() => {
     if (product && product._id !== productId) {
@@ -74,14 +73,13 @@ const UpdateProduct = ({ history}) => {
 
     if (isUpdated) {
       alert.success("Product Updated Successfully");
-      history.push("/admin/products");
+      navigate("/admin/products");
       dispatch({ type: UPDATE_PRODUCT_RESET });
     }
   }, [
     dispatch,
     alert,
     error,
-    history,
     isUpdated,
     productId,
     product,
@@ -128,7 +126,7 @@ const UpdateProduct = ({ history}) => {
 
   return (
     <Fragment>
-      <MetaData title="Create Product" />
+      <MetaData title="Update Product" />
       <div className="dashboard">
         <SidebarAdmin/>
         <div className="newProductContainer">
@@ -137,7 +135,7 @@ const UpdateProduct = ({ history}) => {
             encType="multipart/form-data"
             onSubmit={updateProductSubmitHandler}
           >
-            <h1>Create Product</h1>
+            <h1>Update Product</h1>
 
             <div>
               <SpellcheckIcon />
