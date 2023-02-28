@@ -1,18 +1,22 @@
+
+
 import React, { Fragment, useEffect, useState } from "react";
 import "./Products.scss";
 import { useSelector, useDispatch } from "react-redux";
+import { clearErrors, getProduct } from "../../actions/productAction";
+import Pagination from "react-js-pagination";
 import Slider from "@material-ui/core/Slider";
 import { useAlert } from "react-alert";
 import Typography from "@material-ui/core/Typography";
+import { useParams } from "react-router";
 import MetaData from "../MetaData";
-import { clearErrors, getProduct } from "../../actions/productAction";
-import ProductCard from "./ProductCard";
+import ProductCard from './ProductCard';
 import Loader from "../Loader/Loader";
-import { useParams } from "react-router-dom";
-import Pagination from 'react-js-pagination'
+import OurGallery from "../Main/OurGallery/OurGallery";
+import VideoInfoBottom from "../Main/HomeCompanents/VideoInfo/VideoInfoBottom";
 
 const categories = [
-  "Laptop",
+  "sweet",
   "Footwear",
   "Bottom",
   "Tops",
@@ -23,6 +27,7 @@ const categories = [
 
 const Products = () => {
   const dispatch = useDispatch();
+const { keyword } = useParams();
 
   const alert = useAlert();
 
@@ -41,7 +46,6 @@ const Products = () => {
     filteredProductsCount,
   } = useSelector((state) => state.products);
 
-  const { keyword } = useParams();
 
   const setCurrentPageNo = (e) => {
     setCurrentPage(e);
@@ -68,17 +72,14 @@ const Products = () => {
       ) : (
         <Fragment>
           <MetaData title="PRODUCTS -- ECOMMERCE" />
-          <h2 className="productsHeading">Products</h2>
 
-          <div className="products">
-            {products &&
-              products.map((product) => (
-                <ProductCard key={product._id} product={product} />
-              ))}
-          </div>
+      <div className="products-wrapper">
+      <h2 className="productsHeading">Products</h2>
 
-          <div className="filterBox">
-            <Typography>Price</Typography>
+      <div className="row">
+      <div className="col-lg-3 col-12 col-md-12">
+       <div className="filterBox">
+            <Typography className="products-titles">Price</Typography>
             <Slider
               value={price}
               onChange={priceHandler}
@@ -86,12 +87,14 @@ const Products = () => {
               aria-labelledby="range-slider"
               min={0}
               max={25000}
+              className="slider-products"
             />
 
-            <Typography>Categories</Typography>
+
+            <Typography className="products-titles">Categories</Typography>
             <ul className="categoryBox">
               {categories.map((category) => (
-                <li
+                <li 
                   className="category-link"
                   key={category}
                   onClick={() => setCategory(category)}
@@ -102,7 +105,7 @@ const Products = () => {
             </ul>
 
             <fieldset>
-              <Typography component="legend">Ratings Above</Typography>
+              <Typography component="legend" className="products-titles">Ratings Above</Typography>
               <Slider
                 value={ratings}
                 onChange={(e, newRating) => {
@@ -112,9 +115,34 @@ const Products = () => {
                 valueLabelDisplay="auto"
                 min={0}
                 max={5}
+                className="slider-products"
+
               />
             </fieldset>
           </div>
+          <VideoInfoBottom/>
+       </div>
+     <div className="col-lg-9 col-12 col-md-12">
+     <div className="products">
+       <div className="row">
+       {products &&
+              products.map((product) => (
+                <div className="col-lg-4 col-6 col-6">
+                                  <ProductCard key={product._id} product={product} />
+
+                </div>
+              ))}
+       </div>
+          </div>
+     </div>
+
+   
+        </div>
+      </div>
+
+
+
+
           {resultPerPage < count && (
             <div className="paginationBox">
               <Pagination
@@ -122,12 +150,14 @@ const Products = () => {
                 itemsCountPerPage={resultPerPage}
                 totalItemsCount={productsCount}
                 onChange={setCurrentPageNo}
-                nextPageText={"Next"}
-                prevPageText={"Prev"}
-                firstPageText={"First"}
-                lastPageText={"Last"}
+                nextPageText="Next"
+                prevPageText="Prev"
+                firstPageText="1st"
+                lastPageText="Last"
                 itemClass="page-item"
                 linkClass="page-link"
+                activeClass="pageItemActive"
+                activeLinkClass="pageLinkActive"
               />
             </div>
           )}
@@ -138,3 +168,6 @@ const Products = () => {
 };
 
 export default Products;
+
+
+

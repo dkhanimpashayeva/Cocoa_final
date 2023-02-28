@@ -48,7 +48,7 @@ const {id} =useParams()
                       <BsHeart onClick={addToWishlistHandler}/>
                     </span>
                     <span>
-                      <BiSearch />
+                  <Link to='/search'>    <BiSearch /></Link>
                     </span>
                     <span>
                       <HiOutlineSquare2Stack />

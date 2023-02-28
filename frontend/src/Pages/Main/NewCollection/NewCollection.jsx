@@ -14,12 +14,7 @@ import ViewCompactIcon from "@mui/icons-material/ViewCompact";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import "../../../Companents/Main/TabMenu/NewCollectionTab.scss";
 import ScrollToTop from "../../../Companents/ScrollToTop/ScrollToTop";
-
-
-
-
-
-
+import PureChocalate from "../../../Companents/ServiceCompanents/PureChocalate/PureChocalate";
 
 
 
@@ -52,11 +47,17 @@ const NewCollection = () => {
   return (
     <>
       <div className="container-newcollection">
-        <div className="row align-items-center ">
+        <div className="row ">
           <div className="col-lg-3 col-12">
 <div className="row">
+<div className="new-wrap-right">
+<PureChocalate/>
 <Catagory />
-<img className="category-image" src="https://cdn.shopify.com/s/files/1/0436/0932/5722/files/slide3-bg-responsive_767x_59ec5563-7baf-4399-9739-9b46f88361ba.jpg?v=1646114192"/>  
+
+
+
+</div>
+
 </div>
           </div>
           <div className="col-lg-9 col-12">

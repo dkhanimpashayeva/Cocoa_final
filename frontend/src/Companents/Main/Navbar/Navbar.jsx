@@ -139,7 +139,7 @@ const Navbar = () => {
                                 <Link to="/" className="nav-image-links-test">
                                   Test
                                 </Link>
-                                <Link to="/" className="nav-image-links-hidden">
+                                <Link to="/products" className="nav-image-links-hidden">
                                   Click here
                                 </Link>
                               </div>

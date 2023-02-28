@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './VideoInfoBottom.scss'
 const VideoInfoBottom = () => {
   return (
@@ -18,7 +19,7 @@ const VideoInfoBottom = () => {
   </div>
   <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s.remaining essentially unchanged.It was popularised in the 1960s.
 </p>
-<button>Read More</button>
+<button><Link to='/pages/aboutus'>Read More</Link></button>
 </div>
 </div>
 

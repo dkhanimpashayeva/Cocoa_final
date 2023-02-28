@@ -1,6 +1,5 @@
 .video-info-bottom{
     button{
-        color: white;
         background-color: #613400;
         border: none;
         font-weight: 600;
@@ -8,6 +7,10 @@
         font-size: 20px;
         cursor: pointer;
         transition: 0.3s;
+        a{
+            color: white;
+
+        }
         &:hover{
             background-color: #F0C96A;
         }

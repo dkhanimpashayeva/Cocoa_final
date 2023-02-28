@@ -6,20 +6,20 @@
     border: none;
     outline: none;
   }
-.tabs-wrap{
+  .tabs-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-}
+  }
   .react-tabs__tab-list {
-    padding: 20px ;
+    padding: 20px;
     width: 100%;
-margin: 80px 0 ;
-
-border: 1px solid #f8f8f8;
-    background-color: white !important;
-
+    position: sticky;
+    top: 100px;
+    margin-bottom: 30px;
+    // background-color: #6c481f !important;
+    border: 1px solid #e2e2e2;
+    z-index: 1;
   }
   .Tabs {
     background-color: white;
@@ -30,7 +30,6 @@ border: 1px solid #f8f8f8;
 }
 .coltab-panel-container {
   font-size: 15px;
-
 }
 .new-tabs {
   .coltab {
@@ -45,21 +44,26 @@ border: 1px solid #f8f8f8;
     width: 10%;
   }
 }
-.tabs-filter{
+.tabs-filter {
   margin-left: 600px;
-option{
-  &:hover{
-    background-color: #F0C96A;
+  option {
+    // color: #703f07;
+    &:hover {
+      background-color: #f0c96a;
+    }
   }
-}
-  span{
-    color:black;
+  span {
+    color: black;
     font-weight: 200;
   }
-  select{
+  select {
     outline: none;
-    background-color: #703F07;
+    // background-color: #703f07;
+    z-index: 999;
     color: white;
     padding: 5px;
   }
+}
+.tab-panel-container{
+  margin-top: 70px ;
 }
