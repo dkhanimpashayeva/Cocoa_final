@@ -1,11 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react";
 import "./ForgotPassword.scss";
-import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, forgotPassword } from "../../actions/userAction";
+import { clearErrors, forgotPassword } from "../../actions/userActions";
 import { useAlert } from "react-alert";
 import MetaData from "../MetaData";
+import Loader from "../Loader/Loader";
 
 const ForgotPassword = () => {
   const dispatch = useDispatch();

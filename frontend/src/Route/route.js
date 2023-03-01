@@ -27,6 +27,7 @@ import ConfirmOrder from "./../Companents/Cart/ConfirmOrder";
 import OrderDetails from "../Companents/Cart/OrderDetails";
 import UpdateProduct from './../Companents/Admin/UpdateProduct';
 import UsersList from './../Companents/Admin/UserList';
+import ForgotPassword from "../Companents/User/ForgotPassword";
 
 export const ROUTES = [
   {
@@ -134,6 +135,10 @@ export const ROUTES = [
         element: <ConfirmOrder />,
       },
       { path: "order/:id", element: <OrderDetails /> },
+
+      {
+        path:"password/forgot",element:<ForgotPassword/>
+      }
     ],
   },
 

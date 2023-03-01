@@ -56,7 +56,7 @@
 //     myForm.set("password", password);
 //     myForm.set("avatar", avatar);
 //     dispatch(register(myForm));
-   
+
 //   };
 
 //   const registerDataChange = (e) => {
@@ -75,8 +75,6 @@
 //       setUser({ ...user, [e.target.name]: e.target.value });
 //     }
 
-
-
 //   };
 
 //   const redirect = location ? location.split("=")[1] : "/account";
@@ -89,20 +87,20 @@
 //     if (isAuthenticated) {
 //     navigate(redirect);
 //     }
- 
+
 //   }, [dispatch, error, alert,redirect,navigate]);
 
 //   const switchTabs = (e, tab) => {
- 
+
 //     if (tab === "login") {
 //       switcherTab.current.classList.add("shiftToNeutral");
 //       switcherTab.current.classList.remove("shiftToRight");
 
 //       registerTab.current.classList.remove("shiftToNeutralForm");
 //       loginTab.current.classList.remove("shiftToLeft");
-  
+
 //     }
- 
+
 //     if (tab === "register") {
 //       switcherTab.current.classList.add("shiftToRight");
 //       switcherTab.current.classList.remove("shiftToNeutral");
@@ -110,7 +108,7 @@
 //       registerTab.current.classList.add("shiftToNeutralForm");
 //       loginTab.current.classList.add("shiftToLeft");
 //     }
- 
+
 //   };
 
 //   return (
@@ -213,15 +211,11 @@
 //         </Fragment>
 //       )}
 
-
-
 //     </Fragment>
 //   );
 // };
 
 // export default LoginSignUp;
-
-
 
 import React, { Fragment, useRef, useState, useEffect } from "react";
 import "./LoginSignUp.scss";
@@ -233,9 +227,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userActions";
 import { useAlert } from "react-alert";
 import Loader from "../Loader/Loader";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-const LoginSignUp = ({  location }) => {
+const LoginSignUp = ({ location }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
@@ -246,7 +240,7 @@ const LoginSignUp = ({  location }) => {
   const loginTab = useRef(null);
   const registerTab = useRef(null);
   const switcherTab = useRef(null);
-const navigate=useNavigate()
+  const navigate = useNavigate();
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
@@ -267,8 +261,9 @@ const navigate=useNavigate()
   };
 
   const registerSubmit = (e) => {
+ 
     e.preventDefault();
-
+  
     const myForm = new FormData();
 
     myForm.set("name", name);
@@ -293,8 +288,9 @@ const navigate=useNavigate()
     } else {
       setUser({ ...user, [e.target.name]: e.target.value });
     }
+
   };
-  const redirect = location ? location.split("=")[1] : "/account";
+  const redirect = location ? location.split("=")[1] : "/login";
 
   useEffect(() => {
     if (error) {
@@ -330,7 +326,8 @@ const navigate=useNavigate()
         <Loader />
       ) : (
         <Fragment>
-          <div className="LoginSignUpContainer">
+        <div className="main-container">
+        <div className="LoginSignUpContainer">
             <div className="LoginSignUpBox">
               <div>
                 <div className="login_signUp_toggle">
@@ -416,6 +413,7 @@ const navigate=useNavigate()
               </form>
             </div>
           </div>
+        </div>
         </Fragment>
       )}
     </Fragment>
