@@ -1,3 +1,6 @@
+
+
+
 import React from "react";
 import { Link } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -7,7 +10,8 @@ import "./WishlistCart.scss";
 const WishlistItemCart = ({ item, deleteWishlistItems }) => {
   return (
     <>
-      <div className="wishlist-wrapper">
+   <div className="main-container">
+   <div className="wishlist-wrapper">
      <div className="container">
       <table class="table">
           <thead>
@@ -42,8 +46,10 @@ const WishlistItemCart = ({ item, deleteWishlistItems }) => {
         </table>
       </div>
       </div>
+   </div>
     </>
   );
 };
 
 export default WishlistItemCart;
+

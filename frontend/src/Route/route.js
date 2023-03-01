@@ -25,8 +25,8 @@ import NewProduct from "./../Companents/Admin/NewProduct";
 import OrderSuccess from "./../Companents/Cart/OrderSuccess";
 import ConfirmOrder from "./../Companents/Cart/ConfirmOrder";
 import OrderDetails from "../Companents/Cart/OrderDetails";
-import UpdateProduct from './../Companents/Admin/UpdateProduct';
-import UsersList from './../Companents/Admin/UserList';
+import UpdateProduct from "./../Companents/Admin/UpdateProduct";
+import UsersList from "./../Companents/Admin/UserList";
 import ForgotPassword from "../Companents/User/ForgotPassword";
 
 export const ROUTES = [
@@ -137,8 +137,9 @@ export const ROUTES = [
       { path: "order/:id", element: <OrderDetails /> },
 
       {
-        path:"password/forgot",element:<ForgotPassword/>
-      }
+        path: "password/forgot",
+        element: <ForgotPassword />,
+      },
     ],
   },
 
@@ -152,9 +153,9 @@ export const ROUTES = [
         element: <Dashboard />,
       },
       {
-        path:"users",
-        component:<UsersList/>
-  },
+        path: "users",
+        component: <UsersList />,
+      },
       {
         path: "products",
         isAdmin: "true",
@@ -170,8 +171,7 @@ export const ROUTES = [
         path: "product/:id",
         isAdmin: "true",
         element: <UpdateProduct />,
-      }
-
+      },
     ],
   },
 ];

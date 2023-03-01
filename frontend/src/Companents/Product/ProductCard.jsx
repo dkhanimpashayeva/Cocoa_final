@@ -30,7 +30,7 @@ const ProductCard = ({product}) => {
     alert.success("Item Added To Cart");
   };
   const addToWishlistHandler = () => {
-    dispatch(addItemsToWishlist(id));
+    dispatch(addItemsToWishlist(id,quantity));
     alert.success("Item Added To Wishlist");
   };
   return (

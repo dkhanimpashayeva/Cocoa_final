@@ -39,13 +39,13 @@ const navigate=useNavigate()
   const [imagesPreview, setImagesPreview] = useState([]);
 
   const categories = [
-    "Laptop",
-    "Footwear",
-    "Bottom",
-    "Tops",
-    "Attire",
-    "Camera",
-    "SmartPhones",
+    "Best Sellers",
+    "Bar Chocolates",
+    "Dark Chocolates",
+    "Elite Chocolates",
+    "Divine Chocolates",
+    "Nutty Chocolates",
+    "Milk Chocolates",
   ];
 
    const {productId} = useParams();
@@ -127,9 +127,13 @@ const navigate=useNavigate()
   return (
     <Fragment>
       <MetaData title="Update Product" />
-      <div className="dashboard">
-        <SidebarAdmin/>
-        <div className="newProductContainer">
+      <div className="container">
+     <div className="row">
+   <div className="col-lg-3 col-12 col-md-4">
+   <SidebarAdmin/>
+   </div>
+       <div className="col-lg-8  col-12 col-md-8">
+       <div className="newProductContainer">
           <form
             className="createProductForm"
             encType="multipart/form-data"
@@ -228,6 +232,8 @@ const navigate=useNavigate()
             </Button>
           </form>
         </div>
+       </div>
+     </div>
       </div>
     </Fragment>
   );

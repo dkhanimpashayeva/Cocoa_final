@@ -77,7 +77,7 @@ const Navbar = () => {
         >
           <div className="main-container">
           <div className="row align-items-center justify-content-around">
-              <div className="col-lg-1 col-12 col-md-4 ">
+              <div className="col-lg-1 col-12 col-md-6 col-sm-6">
                 <div className="nav-logo">
                   <Link to="/" className="navbar-logo">
                     <img
@@ -95,23 +95,23 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                      <Link to="/">Branded Foods</Link>
+                      <Link to="/newcollection">Branded Foods</Link>
                       <ul className="sub-menu">
                         <div className="row">
                           <li className="col-lg-7">
                             <ul className="row justify-content-between">
                               <li className="col-lg-4">
-                                <Link to="/">
+                                <Link to="/products">
                                   <h4>Dark Chocolates</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
-                                <Link to="/">
+                                <Link to="/products">
                                   <h4>Milk chocalates</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
-                                <Link to="/">
+                                <Link to="/products">
                                   <h4>Nutty Chocalate</h4>
                                 </Link>
                               </li>
@@ -136,7 +136,7 @@ const Navbar = () => {
                               />
 
                               <div className="nav-image-links">
-                                <Link to="/" className="nav-image-links-test">
+                                <Link to="/newcollection" className="nav-image-links-test">
                                   Test
                                 </Link>
                                 <Link to="/products" className="nav-image-links-hidden">
@@ -159,7 +159,7 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                      <Link to="/">Chocalate</Link>
+                      <Link to="/products">Chocalate</Link>
                       <ul className="sub-menu">
                         <div className="row">
                           <li className="col-lg-4">
@@ -171,12 +171,12 @@ const Navbar = () => {
                           <li className="col-lg-7">
                             <ul className="row justify-content-between">
                               <li className="col-lg-4">
-                                <Link to="/">
+                                <Link to="/products">
                                   <h4>Elite Chocolates</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
-                                <Link to="/">
+                                <Link to="/products">
                                   <h4>Divine chocalates</h4>
                                 </Link>
                               </li>
@@ -271,7 +271,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-12 col-md-8 ">
+              <div className="col-lg-2 col-12 col-md-6 col-sm-6 ">
                 <div className="nav-right-links">
                   <div className="d-flex align-items-center ">
                     <ul className="d-flex align-items-center ">
@@ -311,6 +311,7 @@ const Navbar = () => {
             <div className="slidebar-wrap">
               <div className="nav-mobile">
                 <AiIcons.AiOutlineClose onClick={showSidebar} />
+                <span>Menu</span>
               </div>
               {SidebarData.map((item, index) => {
                 return <SubMenu item={item} key={index} />;
