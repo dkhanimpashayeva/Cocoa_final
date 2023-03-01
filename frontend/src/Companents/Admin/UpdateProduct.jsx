@@ -48,11 +48,11 @@ const navigate=useNavigate()
     "Milk Chocolates",
   ];
 
-   const {productId} = useParams();
+   const {id} = useParams();
 
   useEffect(() => {
-    if (product && product._id !== productId) {
-      dispatch(getProductDetails(productId));
+    if (product && product._id !== id) {
+      dispatch(getProductDetails(id));
     } else {
       setName(product.name);
       setDescription(product.description);
@@ -81,7 +81,7 @@ const navigate=useNavigate()
     alert,
     error,
     isUpdated,
-    productId,
+    id,
     product,
     updateError,
   ]);
@@ -100,7 +100,7 @@ const navigate=useNavigate()
     images.forEach((image) => {
       myForm.append("images", image);
     });
-    dispatch(updateProduct(productId, myForm));
+    dispatch(updateProduct(id, myForm));
   };
 
   const updateProductImagesChange = (e) => {
