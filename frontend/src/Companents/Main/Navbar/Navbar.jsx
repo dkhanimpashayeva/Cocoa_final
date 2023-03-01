@@ -256,7 +256,7 @@ const Navbar = () => {
                           <Link to="pages/faq">FAQ</Link>
                         </li>
                         <li>
-                          <Link to="pages/aboutus">News</Link>
+                          <Link to="pages/news">News</Link>
                         </li>
                         <li>
                           <Link to="pages/contactus">Contact us</Link>

@@ -9,8 +9,9 @@ import { useAlert } from "react-alert";
 import { UPDATE_PROFILE_RESET } from "../../constants/userConstants";
 import Loader from './../Loader/Loader';
 import MetaData from './../MetaData';
+import { useNavigate } from 'react-router-dom';
 
-const UpdateProfile = ({ history }) => {
+const UpdateProfile = () => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
@@ -21,7 +22,7 @@ const UpdateProfile = ({ history }) => {
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState();
   const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
-
+const navigate=useNavigate()
   const updateProfileSubmit = (e) => {
     e.preventDefault();
 
@@ -62,13 +63,13 @@ const UpdateProfile = ({ history }) => {
       alert.success("Profile Updated Successfully");
       dispatch(loadUser());
 
-      history.push("/account");
+      navigate("/login");
 
       dispatch({
         type: UPDATE_PROFILE_RESET,
       });
     }
-  }, [dispatch, error, alert, history, user, isUpdated]);
+  }, [dispatch, error, alert,  user, isUpdated]);
   return (
     <Fragment>
       {loading ? (

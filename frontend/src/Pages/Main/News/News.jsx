@@ -1,13 +1,20 @@
 import React from 'react'
-import LeftSideNews from '../../../Companents/Main/News/LeftSideNews'
-
+import ProductTypes from '../../../Companents/Main/About/AboutPage/ProductTypes'
+import OurGallery from '../../../Companents/Main/OurGallery/OurGallery'
+import ScrollToTop from '../../../Companents/ScrollToTop/ScrollToTop'
+import BestTaste from '../../../Companents/ServiceCompanents/BestTaste/BestTaste'
+import  NewsTitle from '../../../Companents/Main/NewsTitle'
 const News = () => {
   return (
     <div>
+    <NewsTitle/>
 <div className="main-container">
-  <div className="col-lg-3">
-    <LeftSideNews/>
-  </div>
+
+<ProductTypes/>
+
+<OurGallery/>
+<ScrollToTop/>
+
 </div>
 
     </div>

@@ -8,13 +8,10 @@ import { useAlert } from 'react-alert';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../../actions/userActions';
-import { useLocation } from 'react-router-dom';
 const Profile = () => {
-const location=useLocation()
     const {user,loading,isAuthentificated}=useSelector((state)=>state.user)
     const navigate=useNavigate()
     const alert=useAlert()
-    // location.pathname = "/account"
 
     const dispatch=useDispatch()
     function logoutUser() {
@@ -40,7 +37,6 @@ const location=useLocation()
           <div>
             <h1>My Profile</h1>
             <img src={user.avatar.url} alt={user.name} />
-            <Link to="me/update">Edit Profile</Link>
           </div>
           <div>
             <div>
@@ -57,6 +53,7 @@ const location=useLocation()
             </div>
 
             <div>
+
               <Link to="/password/update">Change Password</Link>
          <button onClick={logoutUser}>Logout Account</button>
             </div>

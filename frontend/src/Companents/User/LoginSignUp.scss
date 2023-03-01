@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
 background-color: white;
+margin: 40px;
  
   }
   
@@ -24,7 +25,6 @@ padding: 20px;
   }
   .login_signUp_toggle > p {
     color: rgba(0, 0, 0, 0.678);
-    font: 300 1vmax "Roboto";
     transition: all 0.5s;
     cursor: pointer;
     display: grid;
@@ -37,6 +37,7 @@ padding: 20px;
   
   .LoginSignUpBox > div > button {
     background-color:#703F07;
+    border-radius: 10%;
     height: 3px;
     width: 50%;
     border: none;
@@ -210,4 +211,9 @@ padding: 20px;
       font: 300 1.9vmax "Roboto";
       padding: 1.8vmax;
     }
+  }
+
+
+  button{
+    border:none;
   }

@@ -8,13 +8,7 @@ import OurGallery from "../../../Companents/Main/OurGallery/OurGallery";
 import HeroSlider from "../../../../src/Companents/Main/HomeCompanents/HeroSlider/HeroSlider"
 import ScrollToTop from "../../../Companents/ScrollToTop/ScrollToTop";
 
-// const[mainloading,setMainLoading]=useState(false)
-// useEffect(()=>{
-//   setMainLoading(true)
-//   setTimeout(() => {
-//     setMainLoading(false)
-//   }, 8000);
-// },[])
+
 const Home = () => {
 
 

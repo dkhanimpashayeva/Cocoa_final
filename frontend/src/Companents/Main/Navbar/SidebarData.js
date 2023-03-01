@@ -45,7 +45,7 @@ export const SidebarData = [
       },
       {
         title: "News",
-        path: "/pages/aboutus",
+        path: "/pages/news",
         icon: <IoIcons.IoIosPaper />,
       },
       {
