@@ -31,12 +31,15 @@ padding-left: 3rem;
 display: flex;
 align-items: center;
 text-decoration: none;
-color: #f5f5f5;
-font-size: 18px;
+color: white;
+font-size: 20px;
+font-family: 'Dancing Script', cursive;
 
 &:hover {
 	background:#CEA450;
 	cursor: pointer;
+	color:white;
+	font-family: 'Dancing Script', cursive;
 
 }
 a:hover{

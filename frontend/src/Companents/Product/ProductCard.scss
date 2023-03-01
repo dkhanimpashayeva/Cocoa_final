@@ -5,7 +5,7 @@ a {
 .product-container {
   position: relative;
   transition: 0.3s ease-in-out;
-   margin-top: 20px;
+  margin-top: 20px;
   img {
     width: 100%;
   }
@@ -47,6 +47,13 @@ a {
     transform: translate(-50%, 50%);
     display: flex;
     align-items: center;
+    a {
+      color: #663300;
+
+      &:hover {
+        color: #f0c96a;
+      }
+    }
     span {
       border-radius: 50%;
       background-color: white;
@@ -70,9 +77,8 @@ a {
   }
 }
 
-
 //products
-.products-heading{
+.products-heading {
   padding: 50px 0;
   text-align: center;
 }

@@ -75,9 +75,9 @@ const Navbar = () => {
               useLocation().pathname !== "/" ? "#703f07" : "transparent",
           }}
         >
-          <div className="container">
-            <div className="row align-items-center ">
-              <div className="col-lg-1 col-12 col-md-5">
+          <div className="main-container">
+          <div className="row align-items-center justify-content-around">
+              <div className="col-lg-1 col-12 col-md-4 ">
                 <div className="nav-logo">
                   <Link to="/" className="navbar-logo">
                     <img
@@ -87,7 +87,7 @@ const Navbar = () => {
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-9 col-md-1 col-1">
+              <div className="col-lg-9  ">
                 <div className="nav-menu">
                   <ul className="menu ">
                     <li>
@@ -256,7 +256,7 @@ const Navbar = () => {
                           <Link to="pages/faq">FAQ</Link>
                         </li>
                         <li>
-                          <Link to="pages/news">News</Link>
+                          <Link to="pages/aboutus">News</Link>
                         </li>
                         <li>
                           <Link to="pages/contactus">Contact us</Link>
@@ -271,7 +271,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-12 col-md-6">
+              <div className="col-lg-2 col-12 col-md-8 ">
                 <div className="nav-right-links">
                   <div className="d-flex align-items-center ">
                     <ul className="d-flex align-items-center ">

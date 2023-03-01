@@ -41,14 +41,13 @@
   }
   
   .cartHeader {
-    background-color: tomato;
+    background-color: black;
     width: 90%;
     box-sizing: border-box;
     margin: auto;
     color: white;
     display: grid;
     grid-template-columns: 4fr 1fr 1fr;
-    font: 300 0.7vmax "Roboto";
   }
   .cartHeader > p {
     margin: 10px;

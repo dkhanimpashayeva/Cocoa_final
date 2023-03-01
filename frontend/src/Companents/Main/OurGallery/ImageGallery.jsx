@@ -2,11 +2,13 @@ import React from 'react'
 import { images } from './images';
 import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
-// import './OurGallery.scss'
+
+
+
+
 const ImageGallery = () => {
     const [imageToShow, setImageToShow] = useState("");
     const [lightboxDisplay, setLightBoxDisplay] = useState(false);
-
       const showPrev = (e) => {
         e.stopPropagation();
         let currentIndex = images.indexOf(imageToShow);
@@ -49,8 +51,8 @@ const ImageGallery = () => {
 
              
    
-     <button data-toggle="modal" data-target="#exampleModal" className="modal-search">
-                 <BiSearch/>
+     <button data-toggle="modal" data-target="#exampleModal" className="modal-search" >
+                 <BiSearch />
                </button>
 </div>
     </div>

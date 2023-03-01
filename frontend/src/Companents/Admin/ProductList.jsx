@@ -123,13 +123,15 @@ const navigate=useNavigate()
 
    
 
+<div className="container">
 <div className="row align-items-center ">
   <div className="col-lg-3 col-12 col-md-4">
     <SideBarAdmin/>
   </div>
  
   <div className="col-lg-9 col-12 col-md-8">
-  <div className="productListContainer">
+<div className="container">
+<div className="productListContainer">
           <h1 id="productListHeading">ALL PRODUCTS</h1>
           <DataGrid
             rows={rows}
@@ -141,7 +143,9 @@ const navigate=useNavigate()
           />
   </div>
 </div>
+</div>
         </div>
+</div>
      
     </>
 

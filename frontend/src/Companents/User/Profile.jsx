@@ -57,7 +57,6 @@ const location=useLocation()
             </div>
 
             <div>
-              <Link to="/orders">My Orders</Link>
               <Link to="/password/update">Change Password</Link>
          <button onClick={logoutUser}>Logout Account</button>
             </div>

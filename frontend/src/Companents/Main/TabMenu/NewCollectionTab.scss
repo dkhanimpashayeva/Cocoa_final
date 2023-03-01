@@ -19,9 +19,10 @@
     margin-bottom: 30px;
     border: 1px solid #e2e2e2;
     z-index: 1;
+    background-color: white !important;
   }
   .Tabs {
-    background-color: white;
+    background-color: #613400!important;
     padding: 0;
     height: 5%;
     border: none;
@@ -29,6 +30,7 @@
 }
 .coltab-panel-container {
   font-size: 15px;
+  border: none !important;
 }
 .new-tabs {
   .coltab {

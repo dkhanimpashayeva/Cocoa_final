@@ -3,7 +3,9 @@ import "./Catagory.scss";
 // import { accordionData } from "../FAQ/FaqAccordion/accordionData";
 import Accordion from "../FAQ/FaqAccordion/Accordion";
 import NewArrivals from "./NewArrivals";
+import { useNavigate } from "react-router-dom";
 const Catagory = () => {
+  const navigate=useNavigate()
   const catagoryData = [
     {
       title: "Milk Chocolate",
@@ -23,6 +25,7 @@ const Catagory = () => {
     },
   ];
 
+
   return (
   <>
     <div className="catagory-wrapper">
@@ -34,7 +37,10 @@ const Catagory = () => {
       <div className="catagory-accordion">
         <div className="accordion-catagory">
           {catagoryData.map(({ title, content },index) => (
-            <Accordion title={title} content={content}  key={index}/>
+            
+            <Accordion title={title} content={content}  key={index}  />
+
+            
           ))}
         </div>
       </div>

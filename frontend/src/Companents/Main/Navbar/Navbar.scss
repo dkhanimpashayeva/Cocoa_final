@@ -57,6 +57,7 @@
   .nav-right-links {
     color: white;
     font-size: 25px;
+    padding: 10px 0;
     svg {
       color: white;
     }
@@ -70,8 +71,7 @@
 
 .nav-mobile {
   margin-right: 2rem;
-  font-size: 2rem;
-  // height: 80px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -242,7 +242,7 @@
   transform: scale(1);
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 998px) {
   .header {
     background-color: #703f07 !important;
     margin-bottom: 60px;
@@ -260,7 +260,7 @@
     display: inline-block;
   }
 }
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1299px) {
   .nav {
     padding: 10px 0;
   }
@@ -278,3 +278,27 @@
     }
   }
 }
+@media screen and (max-width: 998px) {
+
+.nav{
+  padding-bottom: 10px;
+ul{
+  li{
+    a{
+      font-size: 10px;
+    }
+  }
+}
+}
+
+}
+
+
+@media screen and (max-width: 576px) {
+nav{
+  margin-bottom: 40px;
+  padding: 10px 0;
+}
+ 
+  
+  }

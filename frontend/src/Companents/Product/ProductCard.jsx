@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Reactstars from "react-rating-stars-component";
 import { Link, useParams } from "react-router-dom";
 import "./ProductCard.scss";
@@ -6,13 +6,16 @@ import { SlBasket } from "react-icons/sl";
 import { BsHeart } from "react-icons/bs";
 import { BiSearch } from "react-icons/bi";
 import { HiOutlineSquare2Stack } from "react-icons/hi2";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { addItemsToWishlist } from "../../actions/productAction";
+import { useAlert } from 'react-alert';
+import { addItemsToCart } from "../../actions/cartAction";
 const ProductCard = ({product}) => {
+  const [quantity, setQuantity] = useState(1);
+
   const dispatch=useDispatch()
-  // const { loading, error, product,id } = useSelector(
-  //   (state) => state.productDetails
-  // );
+  const alert = useAlert();
+  const { id } = useParams();
   const options = {
     edit: false,
     color: "rgba(20,20,20,0.1)",
@@ -21,9 +24,11 @@ const ProductCard = ({product}) => {
     value: product.ratings,
     isHalf: true,
   };
-const {id} =useParams()
 
-
+  const addToCartHandler = () => {
+    dispatch(addItemsToCart(id, quantity));
+    alert.success("Item Added To Cart");
+  };
   const addToWishlistHandler = () => {
     dispatch(addItemsToWishlist(id));
     alert.success("Item Added To Wishlist");
@@ -33,7 +38,18 @@ const {id} =useParams()
       <Link className="productCard" to={`/product/${product._id}`}>
     <div className="product-container">
                 <div className="product-image">
-                      <img src={product.images[0].url} alt={product.name} />
+                      {/* <img src={product.images} alt={product.name} /> */}
+                      {product.images &&
+                          product.images.map((image) => (
+                            <div key={image.public_id}>
+                           
+                                <img
+                                  className="d-block w-100"
+                                  src={image.url}
+                                  alt={product.title}
+                                />
+                            </div>
+                          ))}
 
                 </div>
                 <div className="product-overlay-image">                    
@@ -42,7 +58,7 @@ const {id} =useParams()
               
                   <div className="product-btns">
                     <span>
-                      <SlBasket  />
+                      <SlBasket  onClick={addToCartHandler}/>
                     </span>
                     <span>
                       <BsHeart onClick={addToWishlistHandler}/>

@@ -1,30 +1,6 @@
-// import React, { Fragment, useState } from "react";
-
-// import { useSelector } from 'react-redux';
-
-// const UserOptions = () => {
-//     const { isAuthenticated, user } = useSelector((state) => state.user);
-//     const [open, setOpen] = useState(false);
-
-
-
-
-
-//   return (
-//     <Fragment>
-
-//     </Fragment>
-//   );
-
-//         }
-// export default UserOptions;
-
-
-
 import React, { Fragment, useState } from "react";
 import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
 import Backdrop from "@material-ui/core/Backdrop";
-import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListAltIcon from "@material-ui/icons/ListAlt";
@@ -35,7 +11,6 @@ import { useNavigate } from "react-router-dom";
 import { logout } from "../../../actions/userActions";
 
 const UserOptions = () => {
-  // const {isAuthenticated,user} =useSelector(state=>state.user)
 
   const { cartItems } = useSelector((state) => state.cart);
   const navigate = useNavigate();
@@ -96,7 +71,6 @@ const UserOptions = () => {
         open={open}
         direction="down"
         className="speedDial"
-   
       >
         {options.map((item) => (
           <SpeedDialAction

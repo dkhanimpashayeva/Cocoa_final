@@ -31,6 +31,7 @@ const Dashboard = () => {
   return (
     <div>
       <MetaData title="Dashboard - Admin Panel" />
+<div className="container">
 <div className="row">
   <div className="col-lg-3">
   <SideBarAdmin/>
@@ -65,6 +66,7 @@ const Dashboard = () => {
    
       </div>
     </div>
+</div>
 </div>
     </div>
   )

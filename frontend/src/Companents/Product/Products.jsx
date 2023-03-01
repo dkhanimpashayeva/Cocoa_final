@@ -16,13 +16,13 @@ import OurGallery from "../Main/OurGallery/OurGallery";
 import VideoInfoBottom from "../Main/HomeCompanents/VideoInfo/VideoInfoBottom";
 
 const categories = [
-  "sweet",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "SmartPhones",
+  "Best Sellers",
+  "Bar Chocolates",
+  "Dark Chocolates",
+  "Elite Chocolates",
+  "Divine Chocolates",
+  "Nutty Chocolates",
+  "Milk Chocolates",
 ];
 
 const Products = () => {

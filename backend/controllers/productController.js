@@ -1,10 +1,10 @@
 
+
 const Product = require("../models/productModel");
 const ErrorHander = require("../utils/errorhander");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ApiFeatures = require("../utils/apifeatures");
 const cloudinary=require("cloudinary")
-
 // Get All Product (Admin)
 exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
   const products = await Product.find();
@@ -19,26 +19,6 @@ exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
 
 
 
-
-//Create Product --Admin
-// exports.newProduct = catchAsyncErrors(async (req, res, next) => {
-
-//   // req.body.user = req.user.id;
-
-//   const product = await Product.create(req.body);
-
-//   res.status(201).json({
-//       success: true,
-//       product
-//   })
-
- 
-
-     
-//   }
-
-
-// )
 // Create Product -- Admin
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   let images = [];
@@ -83,11 +63,13 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
 
 
 
+
+
 //Get Products
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
   // return next(new ErrorHander("This is my temp error",500))
 
-  const resultPerPage = 31;
+  const resultPerPage = 15;
   const productCount =await Product.countDocuments();
   const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
