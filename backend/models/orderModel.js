@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+//pasword xanim123
 const orderSchema = new mongoose.Schema({
   shippingInfo: {
     address: {
