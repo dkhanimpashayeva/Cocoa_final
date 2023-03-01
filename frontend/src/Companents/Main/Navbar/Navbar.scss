@@ -94,8 +94,7 @@
 .slidebar-wrap {
   width: 100%;
   margin-top: 30px;
-  opacity: 0;
-  visibility: hidden;
+
 }
 .sidebar-link {
   background: #382d2a;
@@ -163,6 +162,10 @@
   left: 0;
   top: 70px;
   .nav-image-links-image {
+  img{
+    height: 85%;
+    width: 100%;
+  }
     .nav-image-links {
       position: relative;
       a {
@@ -280,10 +283,7 @@
     display: none;
 
   }
-  .slidebar-wrap {
-  visibility: visible;
-    opacity: 100;
-  }
+
   .nav-mobile {
     display: inline-block;
     span {
