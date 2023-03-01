@@ -1,10 +1,8 @@
-
-
 const Product = require("../models/productModel");
 const ErrorHander = require("../utils/errorhander");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ApiFeatures = require("../utils/apifeatures");
-const cloudinary=require("cloudinary")
+const cloudinary = require("cloudinary");
 // Get All Product (Admin)
 exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
   const products = await Product.find();
@@ -13,11 +11,7 @@ exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
     success: true,
     products,
   });
-
 });
-
-
-
 
 // Create Product -- Admin
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
@@ -53,24 +47,12 @@ exports.createProduct = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
 //Get Products
 exports.getAllProducts = catchAsyncErrors(async (req, res) => {
   // return next(new ErrorHander("This is my temp error",500))
 
   const resultPerPage = 18;
-  const productCount =await Product.countDocuments();
+  const productCount = await Product.countDocuments();
   const apiFeature = new ApiFeatures(Product.find(), req.query)
     .search()
     .filter()
@@ -79,7 +61,7 @@ exports.getAllProducts = catchAsyncErrors(async (req, res) => {
   res.status(200).json({
     success: true,
     products,
-    productCount 
+    productCount,
   });
 });
 //Get Product Details
@@ -113,7 +95,6 @@ exports.getAllProductsDetails = catchAsyncErrors(async (req, res, next) => {
 //     product,
 //   });
 // });
-
 
 // Update Product -- Admin
 
@@ -167,10 +148,6 @@ exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-
-
-
-
 //Delete Product
 exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
   const product = await Product.findByIdAndDelete(req.params.id);
@@ -186,8 +163,6 @@ exports.deleteProduct = catchAsyncErrors(async (req, res, next) => {
     message: "Deleted Successfully",
   });
 });
-
-
 
 // Create New Review or Update the review
 exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
@@ -230,7 +205,6 @@ exports.createProductReview = catchAsyncErrors(async (req, res, next) => {
     success: true,
   });
 });
-
 
 // Get All Reviews of a product
 exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
@@ -292,6 +266,3 @@ exports.deleteReview = catchAsyncErrors(async (req, res, next) => {
     success: true,
   });
 });
-
-
-

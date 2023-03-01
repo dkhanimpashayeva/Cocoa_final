@@ -76,8 +76,8 @@ const Navbar = () => {
           }}
         >
           <div className="main-container">
-          <div className="row align-items-center justify-content-around">
-              <div className="col-lg-1 col-12 col-md-6 col-sm-6">
+            <div className="row align-items-center justify-content-around">
+              <div className="col-lg-1 col-10 ">
                 <div className="nav-logo">
                   <Link to="/" className="navbar-logo">
                     <img
@@ -136,10 +136,16 @@ const Navbar = () => {
                               />
 
                               <div className="nav-image-links">
-                                <Link to="/newcollection" className="nav-image-links-test">
+                                <Link
+                                  to="/newcollection"
+                                  className="nav-image-links-test"
+                                >
                                   Test
                                 </Link>
-                                <Link to="/products" className="nav-image-links-hidden">
+                                <Link
+                                  to="/products"
+                                  className="nav-image-links-hidden"
+                                >
                                   Click here
                                 </Link>
                               </div>
@@ -177,12 +183,12 @@ const Navbar = () => {
                               </li>
                               <li className="col-lg-4">
                                 <Link to="/products">
-                                  <h4>Divine chocalates</h4>
+                                  <h4>Divine choco</h4>
                                 </Link>
                               </li>
                               <li className="col-lg-4">
                                 <Link to="/">
-                                  <h4>Coco Magic Fudge</h4>
+                                  <h4>Coco Magic Fudge </h4>
                                 </Link>
                               </li>
                             </ul>
@@ -271,7 +277,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className="col-lg-2 col-12 col-md-6 col-sm-6 ">
+              <div className="col-lg-2 col-10 ">
                 <div className="nav-right-links">
                   <div className="d-flex align-items-center ">
                     <ul className="d-flex align-items-center ">

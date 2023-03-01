@@ -1,4 +1,9 @@
+.nav-menu{
+  display: block;
+}
 .header {
+  width: 100% !important;
+  padding: 10px 0;
   color: white;
   display: flex;
   align-items: center;
@@ -33,6 +38,9 @@
 }
 
 .header2 {
+  width: 100% !important;
+
+  padding: 10px 0;
   position: fixed;
   right: 0%;
   top: 0;
@@ -85,6 +93,9 @@
 }
 .slidebar-wrap {
   width: 100%;
+  margin-top: 30px;
+  opacity: 0;
+  visibility: hidden;
 }
 .sidebar-link {
   background: #382d2a;
@@ -105,7 +116,7 @@
   }
 }
 .pages-sub-menu {
-  width: 20%;
+  width: 30%;
   position: absolute;
   left: 65% !important;
   top: 90px;
@@ -119,18 +130,18 @@
   a {
     color: white;
     text-decoration: none;
-    // text-align: left;
     font-size: 15px;
   }
 }
 .menu > li {
   float: left;
-  height: 15px;
+  // height: 15px;
   line-height: 40px;
   cursor: pointer;
   font-size: 15px;
   z-index: 999;
-  margin: 35px;
+  margin-top: 10px;
+
   .gift-boxes {
     img {
       width: 100%;
@@ -150,7 +161,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  top: 90px;
+  top: 70px;
   .nav-image-links-image {
     .nav-image-links {
       position: relative;
@@ -201,7 +212,7 @@
 
   a {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 10px;
     text-align: left;
   }
   h4 {
@@ -237,7 +248,8 @@
   transform: scale(1);
 }
 
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1240px) {
+
   .header {
     background-color: #703f07 !important;
     margin-bottom: 60px;
@@ -253,33 +265,37 @@
     display: none;
   }
   .nav-mobile {
-    display: inline-block;
+    display: inline-block !important;
 
   }
  
 }
-@media screen and (max-width: 1400px) {
 
+
+@media screen and (max-width: 778px) {
   .nav-logo {
     text-align: center;
-    // padding: 10px 0;
   }
   .nav-menu {
     display: none;
+
+  }
+  .slidebar-wrap {
+  visibility: visible;
+    opacity: 100;
   }
   .nav-mobile {
     display: inline-block;
     span {
-      display: block !important;
+      display: none !important;
     }
   }
-}
-
-
-@media screen and (max-width: 778px) {
   .header {
+    width: 100% !important;
+
     margin-bottom: 40px;
     padding: 10px 0;
+
     .nav-mobile {
 
       span {
@@ -289,5 +305,8 @@
   }
  
 }
+
+
+
 
 

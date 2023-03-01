@@ -10,12 +10,10 @@ export const SidebarData = [
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
-    
       {
         title: "Home page",
         path: "/",
       },
-    
     ],
   },
   {
@@ -106,25 +104,24 @@ export const SidebarData = [
   {
     title: "Gift Boxes",
     path: "/",
-	subNav: [
-		{
-		  title: "Products",
-		  path: "/products",
-		},
-	]
-
+    subNav: [
+      {
+        title: "Products",
+        path: "/products",
+      },
+    ],
   },
 
   {
     title: "New Collection",
     path: "/",
-	iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
-	subNav: [
-		{
-		  title: "Collections",
-		  path: "/newcollection",
-		},
-	]
+    subNav: [
+      {
+        title: "Collections",
+        path: "/newcollection",
+      },
+    ],
   },
 ];

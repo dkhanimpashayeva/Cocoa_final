@@ -1,61 +1,56 @@
-.container-newcollection{
-    margin: 0% auto;
-    width: 95%;
-padding: 50px 0;
+.container-newcollection {
+  margin: 8% auto;
+  width: 95%;
+  padding: 50px 0;
 }
 
+.simple-list-grid ul li:after,
+.simple-list-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+.simple-list-grid {
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
 
+.simple-list-grid ul {
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
 
+.simple-list-grid ul li {
+  padding: 1rem;
+  width: 100%;
+  opacity: 0;
+  border: 1px solid #ccc;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
 
-//
-.simple-list-grid ul li:after, .simple-list-grid:after {
-    content: "";
-    display: table;
-    clear: both
-  }
-  
-  .simple-list-grid {
-    -webkit-transition: all .2s ease-in;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    transition: all .2s ease-in
-  }
-  
-  .simple-list-grid ul {
-    list-style: none;
-    position: relative;
-    margin: 0;
-    padding: 0
-  }
-  
-  .simple-list-grid ul li {
-    padding: 1rem;
-    width: 100%;
-    opacity: 0;
-    border: 1px solid #ccc;
-    -webkit-transition: all .2s ease-in;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    transition: all .2s ease-in
-  }
-  
-  .simple-list-grid ul li .thumb {
-    float: left;
-    margin-right: 1rem;
-    width: 150px;
-    overflow: hidden
-  }
-  .category-image{
-    width: 100%;
-    height: 100%;
-  }
-  .newproduct{
-    width: 100% !important;
-    height: 100%;
-
-  }
-  .new-wrap-right{
-    background-color: white;
-    margin-top: 30px;
-  }
+.simple-list-grid ul li .thumb {
+  float: left;
+  margin-right: 1rem;
+  width: 150px;
+  overflow: hidden;
+}
+.category-image {
+  width: 100%;
+  height: 100%;
+}
+.newproduct {
+  width: 100% !important;
+  height: 100%;
+}
+.new-wrap-right {
+  background-color: white;
+  margin-top: 30px;
+}

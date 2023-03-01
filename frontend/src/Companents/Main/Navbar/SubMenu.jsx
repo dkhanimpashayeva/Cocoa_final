@@ -72,7 +72,7 @@ return (
 	{subnav &&
 		item.subNav.map((item, index) => {
 		return (
-			<DropdownLink to={item.path} key={index}>
+			<DropdownLink to={item.path} key={index} className="drop-down-link">
 			{item.icon}
 			<SidebarLabel>{item.title}</SidebarLabel>
 			</DropdownLink>
